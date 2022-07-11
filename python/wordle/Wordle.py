@@ -1,7 +1,24 @@
 import math
 from functools import reduce
+from contextlib import closing
+import sqlite3
 
 class Wordle :
+
+    # all incoming payloads should include:
+    # - name of sqlite db
+    # - hard mode?
+    # - list of guesses, possibly empty
+    # - list of list of scores (or list of scores for wordle)
+    
+    # endpoints
+    # - guess: send in above payload and get back
+    #   word (next guess)
+    #   expected entropy
+    #   - details element, includes entropy before and after score for each response.  if more than one target word then split entropies out?
+
+    # - solve: above payload, plus list of target words
+
 
     # wordle api functions
 
@@ -24,6 +41,9 @@ class Wordle :
     def qguess(self, guesses, scores) :
         pass
 
+    
+
+
     # to compute the next guess given a set of guesses and scores, look for a guess
     # that minimizes the expected remaining uncertainty.  Each guess has associated
     # with it a set of pairs [answer, score] where answer is taken from the remaining
@@ -37,12 +57,19 @@ class Wordle :
     #  (guess, answer) => score
     #  ([guess, score]) => {answers}
 
-    def __init__(self, scores_file) :
-        raw_scores = self.split_by("|", self.load_file(scores_file))
-        self.answers = self.extract_column(raw_scores, 0)
-        self.guesses = self.extract_column(raw_scores, 1)
-        self.score_by_answer_and_guess = self.extract_score_by_answer_and_guess(raw_scores)
-        self.answers_by_guess_and_score = self.extract_answers_by_guess_and_score(raw_scores)
+    def __init__(self, dbname, guess_scores, hard_mode=False, debug=False) :
+        self.dbname = dbname
+        self.guess_scores = guess_scores
+        self.hard_mdoe = hard_mode
+        self.debug = debug
+
+    def query(self, sql, title=None):
+        with closing(sqlite3.connect(self.dbname)) as connection:
+            cursor = connection.cursor()
+            if self.debug and title is not None:
+                print(f">> {title}: {sql}")
+            cursor.execute(sql)
+            return cursor.fetchall()
 
     def next_guesses(self, remaining_answers) :
         guesses = {}
@@ -55,14 +82,24 @@ class Wordle :
     def next_guesses_sorted(self, next_guesses):
         return guesses.values().sort(key=lambda x: x["expected_uncertainty"])
 
-    def remaining_answers(self, guess_score_pairs):
+    def remaining_answers(self):
         remaining_answers = []
-        for answer in self.answers:
-            for [guess, score] in guess_score_pairs:
-                if self.score_by_answer_and_guess[answer][guess] != score:
-                    next
-            remaining_answers.append(answer)
-        return remaining_answers
+        froms = ["answers as a"]
+        where_clauses = []
+        where_clause = ""
+        n = 0
+        for [guess, score] in self.guess_scores:
+            table = f"scores_{n}"
+            froms.append(f"scores as {table}")
+            where_clauses.append(f"a.answer = {table}.answer")
+            where_clauses.append(f"'{guess}' = {table}.guess")
+            where_clauses.append(f"'{score}' = {table}.score")
+            n = n + 1
+        if n > 0:
+            where_clause = f" where " + " and ".join(where_clauses)
+        from_clause = ", ".join(froms)
+        sql = f"select a.answer from {from_clause} {where_clause}"
+        return self.query(sql)
 
     def expected_uncertainty_of_guess(self, guess, remaining_answers):
         counts_by_score = {}
