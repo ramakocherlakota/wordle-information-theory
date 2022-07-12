@@ -65,6 +65,7 @@ class Wordle :
 
     def query(self, sql, title=None):
         with closing(sqlite3.connect(self.dbname)) as connection:
+            connection.create_function('log2', 1, lambda x: math.log(x, 2))
             cursor = connection.cursor()
             if self.debug and title is not None:
                 print(f">> {title}: {sql}")
@@ -104,13 +105,12 @@ class Wordle :
     def expected_uncertainty_by_guess(self, remaining_answers) :
         answer_count = len(remaining_answers)
         answers_clause = ",".join(list(map(lambda x : f"'{x}'", remaining_answers)))
-        sql = f"select guess, score, count(*) from scores where answer in ({answers_clause}) group by 1, 2"
+        subsql = f"select guess, score, count(*) as c from scores where answer in ({answers_clause}) group by 1, 2"
+        sql = f"select guess, sum(c * log2(c)) / sum(c) from ({subsql}) group by 1 order by 2"
         uncertainty_by_guess = {}
-        for [guess, score, count] in self.query(sql):
-            if not guess in uncertainty_by_guess:
-                uncertainty_by_guess[guess] = 0
-            uncertainty_by_guess[guess] += count * math.log(count, 2) / answer_count
-        return {k: v for k, v in sorted(uncertainty_by_guess.items(), key=lambda item: item[1])}
+        for [guess, uncertainty] in self.query(sql):
+            uncertainty_by_guess[guess] = uncertainty
+        return uncertainty_by_guess
 # print(list(wordle.expected_uncertainty_by_guess(remaining).items())[0:10])
 
     def expected_uncertainty_of_guess(self, guess, remaining_answers):
