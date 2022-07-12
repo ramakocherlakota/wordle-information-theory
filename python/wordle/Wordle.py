@@ -99,9 +99,22 @@ class Wordle :
             where_clause = f" where " + " and ".join(where_clauses)
         from_clause = ", ".join(froms)
         sql = f"select a.answer from {from_clause} {where_clause}"
-        return self.query(sql)
+        return list(map(lambda x : x[0], self.query(sql)))
+
+    def expected_uncertainty_by_guess(self, remaining_answers) :
+        answer_count = len(remaining_answers)
+        answers_clause = ",".join(list(map(lambda x : f"'{x}'", remaining_answers)))
+        sql = f"select guess, score, count(*) from scores where answer in ({answers_clause}) group by 1, 2"
+        uncertainty_by_guess = {}
+        for [guess, score, count] in self.query(sql):
+            if not guess in uncertainty_by_guess:
+                uncertainty_by_guess[guess] = 0
+            uncertainty_by_guess[guess] += count * math.log(count, 2) / answer_count
+        return {k: v for k, v in sorted(uncertainty_by_guess.items(), key=lambda item: item[1])}
+# print(list(wordle.expected_uncertainty_by_guess(remaining).items())[0:10])
 
     def expected_uncertainty_of_guess(self, guess, remaining_answers):
+
         counts_by_score = {}
         remaining_answer_count = 0
         for answer in remaining_answers:
