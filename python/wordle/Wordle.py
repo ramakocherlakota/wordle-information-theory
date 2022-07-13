@@ -22,16 +22,20 @@ class Wordle :
 
     # wordle api functions
 
-    def solve(self, target_word, start_with) :
+    def solve(self, target_word, start_with="raise") :
         pass
 
-    def guess(self, guess_score_pairs, count=1) :
-        remaining_answers = self.remaining_answers(guess_score_pairs)
-        if len(remaining_answers) == 1:
-            return remaining_answers[0]
+    def guess(self) :
+        remaining_answers = self.remaining_answers()
+        if len(remaining_answers) == 0:
+            raise Exception("Inconsistent data")
+        if len(remaining_answers) <= 2:
+            return {'guess': remaining_answers[0], 'uncertainty': 0, 'hard_mode' : True}
         else:
-            next_guesses = self.next_guesses_sorted(self.next_guesses(remaining_answers))
-            return next_guesses[0:count]
+            next_guesses = self.expected_uncertainty_by_guess(remaining_answers)
+            if self.hard_mode:
+                next_guesses = filter(lambda x : x['hard_mode'], next_guesses)
+            return next_guesses[0]
 
     # quordle api functions
 
@@ -40,8 +44,6 @@ class Wordle :
 
     def qguess(self, guesses, scores) :
         pass
-
-    
 
 
     # to compute the next guess given a set of guesses and scores, look for a guess
@@ -60,7 +62,7 @@ class Wordle :
     def __init__(self, dbname, guess_scores, hard_mode=False, debug=False) :
         self.dbname = dbname
         self.guess_scores = guess_scores
-        self.hard_mdoe = hard_mode
+        self.hard_mode = hard_mode
         self.debug = debug
 
     def query(self, sql, title=None):
@@ -72,17 +74,6 @@ class Wordle :
             cursor.execute(sql)
             return cursor.fetchall()
 
-    def next_guesses(self, remaining_answers) :
-        guesses = {}
-        for guess in self.guesses:
-            guesses[guess] = {"guess" : guess,
-                              "expected_uncertainty" : self.expected_uncertainty_of_guess(guess, remaining_answers),
-                              "hard_mode" : guess in remaining_answers}
-        return guesses
-
-    def next_guesses_sorted(self, next_guesses):
-        return guesses.values().sort(key=lambda x: x["expected_uncertainty"])
-
     def remaining_answers(self):
         remaining_answers = []
         froms = ["answers as a"]
@@ -93,40 +84,27 @@ class Wordle :
             table = f"scores_{n}"
             froms.append(f"scores as {table}")
             where_clauses.append(f"a.answer = {table}.answer")
-            where_clauses.append(f"'{guess}' = {table}.guess")
-            where_clauses.append(f"'{score}' = {table}.score")
+            where_clauses.append(f"'{guess.lower()}' = {table}.guess")
+            where_clauses.append(f"'{score.upper()}' = {table}.score")
             n = n + 1
         if n > 0:
             where_clause = f" where " + " and ".join(where_clauses)
         from_clause = ", ".join(froms)
         sql = f"select a.answer from {from_clause} {where_clause}"
-        return list(map(lambda x : x[0], self.query(sql)))
+        return list(map(lambda x : x[0], self.query(sql, "remaining_answers")))
 
     def expected_uncertainty_by_guess(self, remaining_answers) :
         answer_count = len(remaining_answers)
         answers_clause = ",".join(list(map(lambda x : f"'{x}'", remaining_answers)))
         subsql = f"select guess, score, count(*) as c from scores where answer in ({answers_clause}) group by 1, 2"
         sql = f"select guess, sum(c * log2(c)) / sum(c) from ({subsql}) group by 1 order by 2"
-        uncertainty_by_guess = {}
+        uncertainty_by_guess = []
         for [guess, uncertainty] in self.query(sql):
-            uncertainty_by_guess[guess] = uncertainty
+            uncertainty_by_guess.append({"guess": guess,
+                                         "uncertainty": uncertainty,
+                                         "hard_mode": guess in remaining_answers})
         return uncertainty_by_guess
 # print(list(wordle.expected_uncertainty_by_guess(remaining).items())[0:10])
-
-    def expected_uncertainty_of_guess(self, guess, remaining_answers):
-
-        counts_by_score = {}
-        remaining_answer_count = 0
-        for answer in remaining_answers:
-            score = self.score_by_answer_and_guess[answer][guess]
-            if not score in counts_by_score:
-                counts_by_score[score] = 0
-            counts_by_score[score] = counts_by_score[score] + 1
-            remaining_answer_count = remaining_answer_count + 1
-        sum = 0
-        for score in counts_by_score:
-            sum = sum + math.log(counts_by_score[score], 2) 
-        return (sum / remaining_answer_count)
 
     # quordle-related methods (for handling multiple wordles at once)
 
@@ -146,47 +124,4 @@ class Wordle :
         for g in self.guesses:
             merged_guesses[g] = self.merge_maps(g, map(lambda m: m[g], next_guess_maps))
         return merged_guesses
-    
-
-    # utility methods
-
-    def load_file(self, fname) :
-        lines = []
-        with open(fname) as a:
-            while True:
-                line = a.readline()
-                if not line:
-                    break
-                lines.append(line.rstrip())
-        return lines
-
-    def split_by(self, char, lines):
-        rows = []
-        for line in lines:
-            rows.append(line.split(char))
-        return rows
-
-    def extract_score_by_answer_and_guess(self, rows) :
-        score_by_answer_and_guess = {}
-        for [answer, guess, score] in rows:
-            if not answer in score_by_answer_and_guess:
-                score_by_answer_and_guess[answer] = {}
-            score_by_answer_and_guess[answer][guess] = score
-        return score_by_answer_and_guess
-
-    def extract_answers_by_guess_and_score(self, rows):
-        answers_by_guess_and_score = {}
-        for [answer, guess, score] in rows:
-            if not guess in answers_by_guess_and_score:
-                answers_by_guess_and_score[guess] = {}
-            if not score in answers_by_guess_and_score[guess]:
-                answers_by_guess_and_score[guess][score] = []
-            answers_by_guess_and_score[guess][score].append(answer)
-        return answers_by_guess_and_score
-
-    def extract_column(self, rows, i) :
-        col = []
-        for row in rows:
-            col.append(row[i])
-        return col
     
