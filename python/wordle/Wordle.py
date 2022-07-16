@@ -2,6 +2,7 @@ import math
 from functools import reduce
 from contextlib import closing
 import sqlite3
+import re
 
 class Wordle :
 
@@ -22,15 +23,34 @@ class Wordle :
 
     # wordle api functions
 
-    def solve(self, target_word, start_with="raise") :
-        pass
+    def solve(self, target, start_with=[]) :
+        guesses = []
+        for guess in start_with:
+            score = self.score_guess(target, guess)
+            self.guess_scores.append([guess, score])
+            guesses.append({'guess' : guess,
+                            'score' : score})
+        while not self.is_solved():
+            next_guess = self.guess()
+            guess = next_guess['guess']
+            score = self.score_guess(target, guess)
+            self.guess_scores.append([guess, score])
+            next_guess['score'] = score
+            guesses.append(next_guess)
+        return guesses            
 
     def guess(self) :
         remaining_answers = self.remaining_answers()
         if len(remaining_answers) == 0:
             raise Exception("Inconsistent data")
-        if len(remaining_answers) <= 2:
-            return {'guess': remaining_answers[0], 'uncertainty': 0, 'hard_mode' : True}
+        answer_count = len(remaining_answers)
+        if answer_count <= 2:
+            return {
+                'guess': remaining_answers[0],
+                'expected_uncertainty_after_guess': 0,
+                'hard_mode' : True,
+                'uncertainty_before_guess' : math.log(answer_count)
+            }
         else:
             next_guesses = self.expected_uncertainty_by_guess(remaining_answers)
             if self.hard_mode:
@@ -59,7 +79,7 @@ class Wordle :
     #  (guess, answer) => score
     #  ([guess, score]) => {answers}
 
-    def __init__(self, dbname, guess_scores, hard_mode=False, debug=False) :
+    def __init__(self, dbname, guess_scores=[], hard_mode=False, debug=False) :
         self.dbname = dbname
         self.guess_scores = guess_scores
         self.hard_mode = hard_mode
@@ -73,6 +93,18 @@ class Wordle :
                 print(f">> {title}: {sql}")
             cursor.execute(sql)
             return cursor.fetchall()
+
+    def score_guess(self, target, guess):
+        rows = self.query(f"select score from scores where guess = '{guess}' and answer = '{target}'", "score_guess")
+        for row in rows:
+            return row[0]
+        raise Exception(f"Inconsistent data in score_guess (guess={guess} answer={answer}")
+
+    def is_solved(self):
+        for [guess, score] in self.guess_scores:
+            if re.match("^B+$", score):
+                return True
+        return False
 
     def remaining_answers(self):
         remaining_answers = []
@@ -100,10 +132,14 @@ class Wordle :
         sql = f"select guess, sum(c * log2(c)) / sum(c) from ({subsql}) group by 1 order by 2"
         uncertainty_by_guess = []
         for [guess, uncertainty] in self.query(sql):
-            uncertainty_by_guess.append({"guess": guess,
-                                         "uncertainty": uncertainty,
-                                         "hard_mode": guess in remaining_answers})
+            uncertainty_by_guess.append({
+                "guess": guess,
+                "expected_uncertainty_after_guess": uncertainty,
+                "hard_mode": guess in remaining_answers,
+                'uncertainty_before_guess' : math.log(answer_count)
+})
         return uncertainty_by_guess
+
 # print(list(wordle.expected_uncertainty_by_guess(remaining).items())[0:10])
 
     # quordle-related methods (for handling multiple wordles at once)
