@@ -40,6 +40,8 @@ class Wordle :
         return guesses            
 
     def guess(self) :
+        if self.is_solved():
+            return None
         remaining_answers = self.remaining_answers()
         if len(remaining_answers) == 0:
             raise Exception("Inconsistent data")
@@ -56,28 +58,6 @@ class Wordle :
             if self.hard_mode:
                 next_guesses = filter(lambda x : x['hard_mode'], next_guesses)
             return next_guesses[0]
-
-    # quordle api functions
-
-    def qsolve(self, target_words, start_with) :
-        pass
-
-    def qguess(self, guesses, scores) :
-        pass
-
-
-    # to compute the next guess given a set of guesses and scores, look for a guess
-    # that minimizes the expected remaining uncertainty.  Each guess has associated
-    # with it a set of pairs [answer, score] where answer is taken from the remaining
-    # possible answers and score is the corresponding score
-
-    # so iterate through the remining possible answers computing the relevant score
-    # For each possible score, collate the number of answers that correspond
-    # to it.  Then take sum_guess(num(ans) * log(num(ans))) / num(guess)
-
-    # need to be able to efficiently query the following:
-    #  (guess, answer) => score
-    #  ([guess, score]) => {answers}
 
     def __init__(self, dbname, guess_scores=[], hard_mode=False, debug=False) :
         self.dbname = dbname
@@ -125,10 +105,13 @@ class Wordle :
         sql = f"select a.answer from {from_clause} {where_clause}"
         return list(map(lambda x : x[0], self.query(sql, "remaining_answers")))
 
-    def expected_uncertainty_by_guess(self, remaining_answers) :
+    def expected_uncertainty_by_guess(self, remaining_answers, for_guess=None) :
         answer_count = len(remaining_answers)
         answers_clause = ",".join(list(map(lambda x : f"'{x}'", remaining_answers)))
-        subsql = f"select guess, score, count(*) as c from scores where answer in ({answers_clause}) group by 1, 2"
+        guess_clause = ""
+        if for_guess:
+            guess_clause = f" and guess='{guess}'"
+        subsql = f"select guess, score, count(*) as c from scores where answer in ({answers_clause}) {guess_clause} group by 1, 2"
         sql = f"select guess, sum(c * log2(c)) / sum(c) from ({subsql}) group by 1 order by 2"
         uncertainty_by_guess = []
         for [guess, uncertainty] in self.query(sql):
@@ -140,24 +123,3 @@ class Wordle :
 })
         return uncertainty_by_guess
 
-# print(list(wordle.expected_uncertainty_by_guess(remaining).items())[0:10])
-
-    # quordle-related methods (for handling multiple wordles at once)
-
-    def merge_maps(self, g, maps_to_merge) :
-        merged = {"guess": g}
-        merged['guess'] = g
-
-        # qualifies as hard mode if any of them are hard mode
-        merged['hard_mode'] = reduce(lambda x, y: x or y, map(lambda x: x['hard_mode']))
-        # expected uncertainty is the sum of the expected uncertainties
-        merged['expected_uncertainty'] = reduce(lambda x, y: x + y, map(lambda x: x['expected_uncertainty']))
-
-        return merged
-
-    def merge_next_guesses(self, next_guess_maps) :
-        merged_guesses = {}
-        for g in self.guesses:
-            merged_guesses[g] = self.merge_maps(g, map(lambda m: m[g], next_guess_maps))
-        return merged_guesses
-    
