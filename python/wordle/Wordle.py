@@ -51,7 +51,7 @@ class Wordle :
                 'guess': remaining_answers[0],
                 'expected_uncertainty_after_guess': 0,
                 'hard_mode' : True,
-                'uncertainty_before_guess' : math.log(answer_count)
+                'uncertainty_before_guess' : math.log(answer_count, 2)
             }
         else:
             next_guesses = self.expected_uncertainty_by_guess(remaining_answers)
@@ -110,16 +110,16 @@ class Wordle :
         answers_clause = ",".join(list(map(lambda x : f"'{x}'", remaining_answers)))
         guess_clause = ""
         if for_guess:
-            guess_clause = f" and guess='{guess}'"
+            guess_clause = f" and guess='{for_guess}'"
         subsql = f"select guess, score, count(*) as c from scores where answer in ({answers_clause}) {guess_clause} group by 1, 2"
         sql = f"select guess, sum(c * log2(c)) / sum(c) from ({subsql}) group by 1 order by 2"
         uncertainty_by_guess = []
-        for [guess, uncertainty] in self.query(sql):
+        for [guess, uncertainty] in self.query(sql, "expected_uncertainty_by_guess"):
             uncertainty_by_guess.append({
                 "guess": guess,
                 "expected_uncertainty_after_guess": uncertainty,
                 "hard_mode": guess in remaining_answers,
-                'uncertainty_before_guess' : math.log(answer_count)
+                'uncertainty_before_guess' : math.log(answer_count, 2)
 })
         return uncertainty_by_guess
 

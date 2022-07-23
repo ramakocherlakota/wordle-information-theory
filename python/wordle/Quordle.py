@@ -7,10 +7,14 @@ class Quordle:
         self.wordles = []
         for scores in scores_list:
             guess_scores = self.create_guess_scores(guesses, scores)
-            self.wordles.append(Wordle.Wordle(dbname = dbname, hard_mode = hard_mode, debug = debug)
+            self.wordles.append(Wordle.Wordle(dbname = dbname, guess_scores=guess_scores, hard_mode = hard_mode, debug = debug))
 
     def create_guess_scores(self, guesses, scores):
-        
+        guess_scores = []
+        for n in range(len(guesses)):
+            guess_scores.append([guesses[n], scores[n]])
+        return guess_scores
+
 
     def is_solved(self):
         for w in self.wordles:
@@ -21,7 +25,7 @@ class Quordle:
     def guess(self):
         remaining_answers_list = []
         found_guess = None
-        remaining_wordles = []
+        remaining_wordles_list = []
         for wordle in self.wordles:
             if not wordle.is_solved():
                 remaining_answers = wordle.remaining_answers()
@@ -32,16 +36,18 @@ class Quordle:
                     found_guess = remaining_answers[0]
                 remaining_answers_list.append(remaining_answers)
         wordle_expected_uncertainties = []
-        for n in range(len(remaining_wordles)):
-            wordle = reamining_wordles_list[n]
+        for n in range(len(remaining_wordles_list)):
+            wordle = remaining_wordles_list[n]
             remaining_answers = remaining_answers_list[n]
-            wordle_expected_uncertainties.append(list_to_dict_keyed_on(wordle.expected_uncertainty_by_guess(remaining_answers, found_guess)), 'guess')
-        expected_uncertainties = merge_by_guess(wordle_expected_uncertainties)
+            print(remaining_answers)
+            wordle_expected_uncertainties.append(self.list_to_dict_keyed_on(wordle.expected_uncertainty_by_guess(remaining_answers, found_guess), 'guess'))
+        print(wordle_expected_uncertainties)
+        expected_uncertainties = list(self.merge_by_guess(wordle_expected_uncertainties).values())
         expected_uncertainties.sort(key=lambda x: x['expected_uncertainty_after_guess'])
         return expected_uncertainties[0]
             
     # list should be a list of dicts, each with a unique `key` value
-    def list_to_dict_keyed_on(list, key):
+    def list_to_dict_keyed_on(self, list, key):
         retval = {}
         for dict in list:
             retval[dict[key]] = dict
@@ -51,21 +57,25 @@ class Quordle:
     # keys of each dict are guesses, values are next_guess objects
     # return value is a dict keyed on guess
     def merge_by_guess(self, wordle_expected_uncertainties) :
-        return reduce(merge_all_guesses, wordle_expected_uncertainties)
+        return reduce(self.merge_all_guesses, wordle_expected_uncertainties)
 
-    def merge_all_guesses(dict1, dict2) :
+    def merge_all_guesses(self, dict1, dict2) :
         dict3 = {}
         for key in dict1:
             g1 = dict1[key]
             g2 = dict2[key]
-            dict3[key] = merge_guesses(g1, g2)
+            dict3[key] = self.merge_guesses(g1, g2)
         return dict3
 
-    def merge_guesses(g1, g2) :
+    def merge_guesses(self, g1, g2) :
+        if not g1:
+            return g2
+        if not g2:
+            return g1
         g = {}
         g['guess'] = g1['guess']
         g['hard_mode'] = g1['hard_mode'] or g2['hard_mode'] # hard_mode in quordle means at least of the guesses is hard_mode
         g['uncertainty_before_guess'] = g1['uncertainty_before_guess'] + g2['uncertainty_before_guess']
         g['expected_uncertainty_after_guess'] = g1['expected_uncertainty_after_guess'] + g2['expected_uncertainty_after_guess']
-
+        return g
 

@@ -1,5 +1,5 @@
 import Wordle
 
-wordle = Wordle.Wordle("../../data/scores.txt")
+wordle = Wordle.Wordle("../db/wordle.sqlite", [["trice", "ww--w"], ["salon", "-----"]])
 
-print(wordle.guess([["trice", "ww--w"], ["salon", "-----"]]))
+print(wordle.guess())
