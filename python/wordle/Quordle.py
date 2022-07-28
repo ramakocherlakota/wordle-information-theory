@@ -39,9 +39,7 @@ class Quordle:
         for n in range(len(remaining_wordles_list)):
             wordle = remaining_wordles_list[n]
             remaining_answers = remaining_answers_list[n]
-            print(remaining_answers)
             wordle_expected_uncertainties.append(self.list_to_dict_keyed_on(wordle.expected_uncertainty_by_guess(remaining_answers, found_guess), 'guess'))
-        print(wordle_expected_uncertainties)
         expected_uncertainties = list(self.merge_by_guess(wordle_expected_uncertainties).values())
         expected_uncertainties.sort(key=lambda x: x['expected_uncertainty_after_guess'])
         return expected_uncertainties[0]
