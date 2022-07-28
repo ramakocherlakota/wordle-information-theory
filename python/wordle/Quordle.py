@@ -12,7 +12,8 @@ class Quordle:
     def create_guess_scores(self, guesses, scores):
         guess_scores = []
         for n in range(len(guesses)):
-            guess_scores.append([guesses[n], scores[n]])
+            if n < len(scores):
+                guess_scores.append([guesses[n], scores[n]])
         return guess_scores
 
 
@@ -23,21 +24,25 @@ class Quordle:
         return True
 
     def guess(self):
-        remaining_answers_list = []
         found_guess = None
-        remaining_wordles_list = []
-        for wordle in self.wordles:
+        still_unsolved = []
+        remaining_answers_list = []
+        for n in range(len(self.wordles)):
+            wordle = self.wordles[n]
             if not wordle.is_solved():
+                still_unsolved.append(n)
                 remaining_answers = wordle.remaining_answers()
-                remaining_wordles_list.append(wordle)
                 if len(remaining_answers) == 0:
                     raise Exception("Inconsistent data")
                 if len(remaining_answers) == 1:
                     found_guess = remaining_answers[0]
                 remaining_answers_list.append(remaining_answers)
+        if len(still_unsolved) == 0:
+            return "Done"
+            
         wordle_expected_uncertainties = []
-        for n in range(len(remaining_wordles_list)):
-            wordle = remaining_wordles_list[n]
+        for n in range(len(still_unsolved)):
+            wordle = self.wordles[still_unsolved[n]]
             remaining_answers = remaining_answers_list[n]
             wordle_expected_uncertainties.append(self.list_to_dict_keyed_on(wordle.expected_uncertainty_by_guess(remaining_answers, found_guess), 'guess'))
         expected_uncertainties = list(self.merge_by_guess(wordle_expected_uncertainties).values())

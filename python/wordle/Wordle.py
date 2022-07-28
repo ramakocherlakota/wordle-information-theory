@@ -57,7 +57,14 @@ class Wordle :
             next_guesses = self.expected_uncertainty_by_guess(remaining_answers)
             if self.hard_mode:
                 next_guesses = filter(lambda x : x['hard_mode'], next_guesses)
-            return next_guesses[0]
+            best_uncertainty = next_guesses[0]['expected_uncertainty_after_guess']
+            # prefer a guess in remaining_answers if there is one with the same uncertainty
+            for g in next_guesses:
+                print(f"{g['guess']} : {g['expected_uncertainty_after_guess']}")
+                if g['expected_uncertainty_after_guess'] > best_uncertainty:
+                    return next_guesses[0]
+                if g['guess'] in remaining_answers:
+                    return g
 
     def __init__(self, dbname, guess_scores=[], hard_mode=False, debug=False) :
         self.dbname = dbname
@@ -82,7 +89,7 @@ class Wordle :
 
     def is_solved(self):
         for [guess, score] in self.guess_scores:
-            if re.match("^B+$", score):
+            if re.match("^B+$", score.upper()):
                 return True
         return False
 
@@ -120,6 +127,6 @@ class Wordle :
                 "expected_uncertainty_after_guess": uncertainty,
                 "hard_mode": guess in remaining_answers,
                 'uncertainty_before_guess' : math.log(answer_count, 2)
-})
+            })
         return uncertainty_by_guess
 
