@@ -16,12 +16,30 @@ class Quordle:
                 guess_scores.append([guesses[n], scores[n]])
         return guess_scores
 
-
     def is_solved(self):
         for w in self.wordles:
             if not w.is_solved():
                 return False
         return True
+
+    def solve(self, targets, start_with=[]):
+        guesses = []
+        assert len(targets) == len(self.wordles)
+        for n in range(len(targets)):
+            target = targets[n]
+            wordle = self.wordles[n]
+            for guess in start_with:
+                score = wordle.score_guess(target, guess)
+                wordle.guess_scores.append([guess, score])
+        while not self.is_solved():
+            next_guess = self.guess()
+            guess = next_guess['guess']
+            for wordle in self.wordles:
+                if not wordle.is_solved():
+                    score = wordle.score_guess(target, guess)
+                    wordle.guess_scores.append([guess, score])
+            guesses.append(next_guess)
+        return guesses
 
     def guess(self):
         found_guess = None

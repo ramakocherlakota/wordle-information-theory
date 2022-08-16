@@ -1,8 +1,6 @@
 import math
-from functools import reduce
 from contextlib import closing
-import sqlite3
-import re
+import sqlite3, re, mysql.connector
 
 class Wordle :
 
@@ -50,31 +48,52 @@ class Wordle :
             return {
                 'guess': remaining_answers[0],
                 'expected_uncertainty_after_guess': 0,
-                'hard_mode' : True,
+                'compatible' : True,
                 'uncertainty_before_guess' : math.log(answer_count, 2)
             }
         else:
             next_guesses = self.expected_uncertainty_by_guess(remaining_answers)
             if self.hard_mode:
-                next_guesses = filter(lambda x : x['hard_mode'], next_guesses)
+                next_guesses = filter(lambda x : x['compatible'], next_guesses)
             best_uncertainty = next_guesses[0]['expected_uncertainty_after_guess']
             # prefer a guess in remaining_answers if there is one with the same uncertainty
             for g in next_guesses:
-                print(f"{g['guess']} : {g['expected_uncertainty_after_guess']}")
                 if g['expected_uncertainty_after_guess'] > best_uncertainty:
                     return next_guesses[0]
                 if g['guess'] in remaining_answers:
                     return g
 
-    def __init__(self, dbname, guess_scores=[], hard_mode=False, debug=False) :
-        self.dbname = dbname
+    def __init__(self, guess_scores=[], hard_mode=False, debug=False,
+                 sqlite_dbname=None, 
+                 mysql_username=None, 
+                 mysql_password=None,
+                 mysql_host=None,
+                 mysql_database=None) :
+        self.sqlite_dbname = sqlite_dbname
+        self.mysql_username = mysql_username
+        self.mysql_password = mysql_password
+        self.mysql_host = mysql_host
+        self.mysql_database = mysql_database
         self.guess_scores = guess_scores
         self.hard_mode = hard_mode
         self.debug = debug
 
-    def query(self, sql, title=None):
-        with closing(sqlite3.connect(self.dbname)) as connection:
+    def connect(self):
+        if self.sqlite_dbname:
+            self.log2 = "log2("
+            connection = sqlite3.connect(self.sqlite_dbname)
             connection.create_function('log2', 1, lambda x: math.log(x, 2))
+            return connection
+        else:
+            self.log2 = "log(2, "
+            return mysql.connector.connect(user=self.mysql_username, 
+                                           password=self.mysql_password,
+                                           host=self.mysql_host,
+                                           database=self.mysql_database)
+
+
+    def query(self, sql, title=None):
+        with closing(self.connect()) as connection:
             cursor = connection.cursor()
             if self.debug and title is not None:
                 print(f">> {title}: {sql}")
@@ -119,14 +138,14 @@ class Wordle :
         if for_guess:
             guess_clause = f" and guess='{for_guess}'"
         subsql = f"select guess, score, count(*) as c from scores where answer in ({answers_clause}) {guess_clause} group by 1, 2"
-        sql = f"select guess, sum(c * log2(c)) / sum(c) from ({subsql}) group by 1 order by 2"
+        sql = f"select guess, sum(c * {self.log2}c)) / sum(c) from ({subsql}) as t1 group by 1 order by 2"
         uncertainty_by_guess = []
         for [guess, uncertainty] in self.query(sql, "expected_uncertainty_by_guess"):
             uncertainty_by_guess.append({
                 "guess": guess,
                 "expected_uncertainty_after_guess": uncertainty,
-                "hard_mode": guess in remaining_answers,
-                'uncertainty_before_guess' : math.log(answer_count, 2)
+                "compatible": guess in remaining_answers,
+                "uncertainty_before_guess" : math.log(answer_count, 2)
             })
         return uncertainty_by_guess
 
