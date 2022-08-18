@@ -1,5 +1,19 @@
 import Wordle
+import sys, json
 
-wordle = Wordle.Wordle("../db/wordle.sqlite", [["trice", "-b--w"], ["salon", "--w--"]])
+guess_scores = []
+hard_mode = False
+debug = False
 
-print(wordle.guess())
+for arg in sys.argv:
+    if arg.startswith("-"):
+        if arg == "--hard":
+            hard_mode = True
+        if arg == "--debug":
+            debug = True
+    if "=" in arg:
+        guess_scores.append(arg.split("="))
+
+wordle = Wordle.Wordle(sqlite_dbname = "../db/wordle.sqlite", guess_scores = guess_scores, hard_mode=hard_mode, debug=debug)
+
+print(json.dumps(wordle.guess()))

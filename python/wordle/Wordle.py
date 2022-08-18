@@ -4,38 +4,7 @@ import sqlite3, re, mysql.connector
 
 class Wordle :
 
-    # all incoming payloads should include:
-    # - name of sqlite db
-    # - hard mode?
-    # - list of guesses, possibly empty
-    # - list of list of scores (or list of scores for wordle)
-    
-    # endpoints
-    # - guess: send in above payload and get back
-    #   word (next guess)
-    #   expected entropy
-    #   - details element, includes entropy before and after score for each response.  if more than one target word then split entropies out?
-
-    # - solve: above payload, plus list of target words
-
-
     # wordle api functions
-
-    def solve(self, target, start_with=[]) :
-        guesses = []
-        for guess in start_with:
-            score = self.score_guess(target, guess)
-            self.guess_scores.append([guess, score])
-            guesses.append({'guess' : guess,
-                            'score' : score})
-        while not self.is_solved():
-            next_guess = self.guess()
-            guess = next_guess['guess']
-            score = self.score_guess(target, guess)
-            self.guess_scores.append([guess, score])
-            next_guess['score'] = score
-            guesses.append(next_guess)
-        return guesses            
 
     def guess(self) :
         if self.is_solved():
@@ -54,7 +23,7 @@ class Wordle :
         else:
             next_guesses = self.expected_uncertainty_by_guess(remaining_answers)
             if self.hard_mode:
-                next_guesses = filter(lambda x : x['compatible'], next_guesses)
+                next_guesses = list(filter(lambda x : x['compatible'], next_guesses))
             best_uncertainty = next_guesses[0]['expected_uncertainty_after_guess']
             # prefer a guess in remaining_answers if there is one with the same uncertainty
             for g in next_guesses:
@@ -62,6 +31,43 @@ class Wordle :
                     return next_guesses[0]
                 if g['guess'] in remaining_answers:
                     return g
+
+    def solve(self, target, start_with=[]) :
+        guesses = []
+        turn = 1
+        for guess in start_with:
+            score = self.score_guess(target, guess)
+            self.guess_scores.append([guess, score])
+            guesses.append({'guess' : guess,
+                            'score' : score,
+                            'turn' : turn})
+            turn = turn + 1
+        while not self.is_solved():
+            next_guess = self.guess()
+            guess = next_guess['guess']
+            score = self.score_guess(target, guess)
+            self.guess_scores.append([guess, score])
+            next_guess['score'] = score
+            next_guess['turn'] = turn
+            turn = turn + 1
+            guesses.append(next_guess)
+        return guesses            
+
+
+    # all incoming payloads should include:
+    # - name of sqlite db or connect info for mysql
+    # - hard mode?
+    # - list of guesses and scores
+    
+    # endpoints
+    # - guess: send in above payload and get back
+    #   word (next guess)
+    #   expected entropy
+    #   - details element, includes entropy before and after score for each response.  if more than one target word then split entropies out?
+
+    # - solve: above payload, plus 
+    #   target words
+    #   starting words
 
     def __init__(self, guess_scores=[], hard_mode=False, debug=False,
                  sqlite_dbname=None, 
