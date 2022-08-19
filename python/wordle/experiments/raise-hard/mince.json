@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--W-B",
+    "turn": 1
+  },
+  {
+    "guess": "binge",
+    "expected_uncertainty_after_guess": 1.36,
+    "compatible": true,
+    "uncertainty_before_guess": 4.643856189774724,
+    "score": "-BB-B",
+    "turn": 2
+  },
+  {
+    "guess": "mince",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WBW--",
+    "turn": 1
+  },
+  {
+    "guess": "nadir",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "-B-BB",
+    "turn": 2
+  },
+  {
+    "guess": "tapir",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

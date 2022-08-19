@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W-BB-",
+    "turn": 1
+  },
+  {
+    "guess": "brisk",
+    "expected_uncertainty_after_guess": 0.9509775004326938,
+    "compatible": true,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "-BBB-",
+    "turn": 2
+  },
+  {
+    "guess": "crisp",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "--W--",
+    "turn": 1
+  },
+  {
+    "guess": "pilot",
+    "expected_uncertainty_after_guess": 2.0480493343503885,
+    "compatible": true,
+    "uncertainty_before_guess": 6.7414669864011465,
+    "score": "-B---",
+    "turn": 2
+  },
+  {
+    "guess": "candy",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": false,
+    "uncertainty_before_guess": 4,
+    "score": "--BWB",
+    "turn": 3
+  },
+  {
+    "guess": "dingy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

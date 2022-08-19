@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B-W-",
+    "turn": 1
+  },
+  {
+    "guess": "salon",
+    "expected_uncertainty_after_guess": 0.975488750216347,
+    "compatible": true,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "WB---",
+    "turn": 2
+  },
+  {
+    "guess": "hasty",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "-BBBB",
+    "turn": 3
+  },
+  {
+    "guess": "pasty",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "-BBBB",
+    "turn": 4
+  },
+  {
+    "guess": "tasty",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

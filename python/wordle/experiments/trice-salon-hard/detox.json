@@ -1,0 +1,28 @@
+[
+  {
+    "guess": "salon",
+    "score": "---B-",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "W---W",
+    "turn": 2
+  },
+  {
+    "guess": "depot",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BB-BW",
+    "turn": 3
+  },
+  {
+    "guess": "detox",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

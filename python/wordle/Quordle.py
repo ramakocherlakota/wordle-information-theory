@@ -3,44 +3,6 @@ from functools import reduce
 
 class Quordle:
 
-    def __init__(self, dbname, guesses=[], scores_list=[[]], hard_mode=False, debug=False) :
-        self.wordles = []
-        for scores in scores_list:
-            guess_scores = self.create_guess_scores(guesses, scores)
-            self.wordles.append(Wordle.Wordle(dbname = dbname, guess_scores=guess_scores, hard_mode = hard_mode, debug = debug))
-
-    def create_guess_scores(self, guesses, scores):
-        guess_scores = []
-        for n in range(len(guesses)):
-            if n < len(scores):
-                guess_scores.append([guesses[n], scores[n]])
-        return guess_scores
-
-    def is_solved(self):
-        for w in self.wordles:
-            if not w.is_solved():
-                return False
-        return True
-
-    def solve(self, targets, start_with=[]):
-        guesses = []
-        assert len(targets) == len(self.wordles)
-        for n in range(len(targets)):
-            target = targets[n]
-            wordle = self.wordles[n]
-            for guess in start_with:
-                score = wordle.score_guess(target, guess)
-                wordle.guess_scores.append([guess, score])
-        while not self.is_solved():
-            next_guess = self.guess()
-            guess = next_guess['guess']
-            for wordle in self.wordles:
-                if not wordle.is_solved():
-                    score = wordle.score_guess(target, guess)
-                    wordle.guess_scores.append([guess, score])
-            guesses.append(next_guess)
-        return guesses
-
     def guess(self):
         found_guess = None
         still_unsolved = []
@@ -67,6 +29,49 @@ class Quordle:
         expected_uncertainties.sort(key=lambda x: x['expected_uncertainty_after_guess'])
         return expected_uncertainties[0]
             
+    def solve(self, targets, start_with=[]):
+        guesses = []
+        assert len(targets) == len(self.wordles)
+        for n in range(len(targets)):
+            target = targets[n]
+            wordle = self.wordles[n]
+            for guess in start_with:
+                score = wordle.score_guess(target, guess)
+                wordle.guess_scores.append([guess, score])
+        while not self.is_solved():
+            next_guess = self.guess()
+            guess = next_guess['guess']
+            for wordle in self.wordles:
+                if not wordle.is_solved():
+                    score = wordle.score_guess(target, guess)
+                    wordle.guess_scores.append([guess, score])
+            guesses.append(next_guess)
+        return guesses
+
+    def __init__(self, guesses=[], scores_list=[[]], hard_mode=False, debug=False,
+                 sqlite_dbname=None, 
+                 mysql_username=None, 
+                 mysql_password=None,
+                 mysql_host=None,
+                 mysql_database=None) :
+        self.wordles = []
+        for scores in scores_list:
+            guess_scores = self.create_guess_scores(guesses, scores)
+            self.wordles.append(Wordle.Wordle(guess_scores=guess_scores, hard_mode = hard_mode, debug = debug, mysql_username = mysql_username, mysql_password = mysql_password, mysql_host = mysql_host, mysql_database = mysql_database))
+
+    def create_guess_scores(self, guesses, scores):
+        guess_scores = []
+        for n in range(len(guesses)):
+            if n < len(scores):
+                guess_scores.append([guesses[n], scores[n]])
+        return guess_scores
+
+    def is_solved(self):
+        for w in self.wordles:
+            if not w.is_solved():
+                return False
+        return True
+
     # list should be a list of dicts, each with a unique `key` value
     def list_to_dict_keyed_on(self, list, key):
         retval = {}

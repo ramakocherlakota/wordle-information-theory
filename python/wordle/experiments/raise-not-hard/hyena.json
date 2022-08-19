@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W--W",
+    "turn": 1
+  },
+  {
+    "guess": "cleat",
+    "expected_uncertainty_after_guess": 1.471722826400503,
+    "compatible": true,
+    "uncertainty_before_guess": 6.10852445677817,
+    "score": "--BW-",
+    "turn": 2
+  },
+  {
+    "guess": "amend",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "W-BB-",
+    "turn": 3
+  },
+  {
+    "guess": "hyena",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

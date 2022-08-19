@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WW-WB",
+    "turn": 1
+  },
+  {
+    "guess": "chant",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": false,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "--BW-",
+    "turn": 2
+  },
+  {
+    "guess": "snare",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

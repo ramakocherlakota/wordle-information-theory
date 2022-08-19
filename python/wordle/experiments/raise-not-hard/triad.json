@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WWB--",
+    "turn": 1
+  },
+  {
+    "guess": "abled",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": false,
+    "uncertainty_before_guess": 2,
+    "score": "W---B",
+    "turn": 2
+  },
+  {
+    "guess": "triad",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

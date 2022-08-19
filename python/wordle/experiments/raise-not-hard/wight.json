@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "--W--",
+    "turn": 1
+  },
+  {
+    "guess": "pilot",
+    "expected_uncertainty_after_guess": 2.0480493343503885,
+    "compatible": true,
+    "uncertainty_before_guess": 6.7414669864011465,
+    "score": "-B--B",
+    "turn": 2
+  },
+  {
+    "guess": "admin",
+    "expected_uncertainty_after_guess": 0.7924812503605781,
+    "compatible": false,
+    "uncertainty_before_guess": 2.584962500721156,
+    "score": "---W-",
+    "turn": 3
+  },
+  {
+    "guess": "awful",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": false,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-W---",
+    "turn": 4
+  },
+  {
+    "guess": "wight",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

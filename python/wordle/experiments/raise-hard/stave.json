@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W-WB",
+    "turn": 1
+  },
+  {
+    "guess": "slate",
+    "expected_uncertainty_after_guess": 1.8642106257572142,
+    "compatible": true,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "B-BWB",
+    "turn": 2
+  },
+  {
+    "guess": "stage",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "BBB-B",
+    "turn": 3
+  },
+  {
+    "guess": "stake",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBB-B",
+    "turn": 4
+  },
+  {
+    "guess": "stave",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

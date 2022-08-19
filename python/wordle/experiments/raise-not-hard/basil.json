@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-BWW-",
+    "turn": 1
+  },
+  {
+    "guess": "antic",
+    "expected_uncertainty_after_guess": 0.4,
+    "compatible": false,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "W--B-",
+    "turn": 2
+  },
+  {
+    "guess": "basil",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

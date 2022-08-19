@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "B-W-W",
+    "turn": 1
+  },
+  {
+    "guess": "caper",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": false,
+    "uncertainty_before_guess": 3,
+    "score": "W--WW",
+    "turn": 2
+  },
+  {
+    "guess": "relic",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

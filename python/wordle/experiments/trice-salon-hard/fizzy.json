@@ -1,0 +1,28 @@
+[
+  {
+    "guess": "salon",
+    "score": "-----",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "--W--",
+    "turn": 2
+  },
+  {
+    "guess": "giddy",
+    "expected_uncertainty_after_guess": 0.8,
+    "compatible": true,
+    "uncertainty_before_guess": 3.3219280948873626,
+    "score": "-B--B",
+    "turn": 3
+  },
+  {
+    "guess": "fizzy",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "guess": "raise",
+    "score": "WB--W",
+    "turn": 1
+  },
+  {
+    "guess": "taper",
+    "expected_uncertainty_after_guess": 2.2637170709019343,
+    "compatible": true,
+    "uncertainty_before_guess": 4.807354922057604,
+    "score": "-B-BB",
+    "turn": 2
+  },
+  {
+    "guess": "lager",
+    "expected_uncertainty_after_guess": 1.2295739585136225,
+    "compatible": true,
+    "uncertainty_before_guess": 3.5849625007211565,
+    "score": "-BWBB",
+    "turn": 3
+  },
+  {
+    "guess": "gamer",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "BB-BB",
+    "turn": 4
+  },
+  {
+    "guess": "gayer",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BB-BB",
+    "turn": 5
+  },
+  {
+    "guess": "gazer",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 6
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "WB--W",
+    "turn": 1
+  },
+  {
+    "guess": "empty",
+    "expected_uncertainty_after_guess": 1.5005718725358397,
+    "compatible": false,
+    "uncertainty_before_guess": 4.807354922057604,
+    "score": "W----",
+    "turn": 2
+  },
+  {
+    "guess": "aglow",
+    "expected_uncertainty_after_guess": 0.2857142857142857,
+    "compatible": false,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "WW---",
+    "turn": 3
+  },
+  {
+    "guess": "gazer",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]
