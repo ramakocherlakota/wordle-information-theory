@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--B-W",
+    "turn": 1
+  },
+  {
+    "guess": "edict",
+    "expected_uncertainty_after_guess": 0.8,
+    "compatible": true,
+    "uncertainty_before_guess": 3.9068905956085187,
+    "score": "W-BW-",
+    "turn": 2
+  },
+  {
+    "guess": "chief",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

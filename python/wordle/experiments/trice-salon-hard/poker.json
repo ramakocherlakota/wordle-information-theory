@@ -1,0 +1,44 @@
+[
+  {
+    "guess": "salon",
+    "score": "---W-",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "-W--W",
+    "turn": 2
+  },
+  {
+    "guess": "mower",
+    "expected_uncertainty_after_guess": 1.4782177784002017,
+    "compatible": true,
+    "uncertainty_before_guess": 4,
+    "score": "-B-BB",
+    "turn": 3
+  },
+  {
+    "guess": "rover",
+    "expected_uncertainty_after_guess": 1.1428571428571428,
+    "compatible": true,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "-B-BB",
+    "turn": 4
+  },
+  {
+    "guess": "joker",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "-BBBB",
+    "turn": 5
+  },
+  {
+    "guess": "poker",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 6
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "---WW",
+    "turn": 1
+  },
+  {
+    "guess": "spelt",
+    "expected_uncertainty_after_guess": 0.9332844513778149,
+    "compatible": true,
+    "uncertainty_before_guess": 5.357552004618084,
+    "score": "W-W-W",
+    "turn": 2
+  },
+  {
+    "guess": "testy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "WWW--",
+    "turn": 3
+  },
+  {
+    "guess": "ethos",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

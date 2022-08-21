@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "W---W",
+    "turn": 1
+  },
+  {
+    "guess": "deter",
+    "expected_uncertainty_after_guess": 2.302359050536854,
+    "compatible": true,
+    "uncertainty_before_guess": 6.672425341971495,
+    "score": "---BB",
+    "turn": 2
+  },
+  {
+    "guess": "clown",
+    "expected_uncertainty_after_guess": 1.4615384615384615,
+    "compatible": false,
+    "uncertainty_before_guess": 4.700439718141093,
+    "score": "-----",
+    "turn": 3
+  },
+  {
+    "guess": "buyer",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "--WBB",
+    "turn": 4
+  },
+  {
+    "guess": "hyper",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

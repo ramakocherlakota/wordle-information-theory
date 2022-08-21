@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "---WW",
+    "turn": 1
+  },
+  {
+    "guess": "spelt",
+    "expected_uncertainty_after_guess": 0.9332844513778149,
+    "compatible": true,
+    "uncertainty_before_guess": 5.357552004618084,
+    "score": "B-BB-",
+    "turn": 2
+  },
+  {
+    "guess": "shawl",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": false,
+    "uncertainty_before_guess": 2,
+    "score": "B---B",
+    "turn": 3
+  },
+  {
+    "guess": "smell",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

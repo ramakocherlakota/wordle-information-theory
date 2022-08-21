@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B---",
+    "turn": 1
+  },
+  {
+    "guess": "tangy",
+    "expected_uncertainty_after_guess": 2.4771834722280235,
+    "compatible": true,
+    "uncertainty_before_guess": 6.507794640198696,
+    "score": "-BBB-",
+    "turn": 2
+  },
+  {
+    "guess": "manga",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

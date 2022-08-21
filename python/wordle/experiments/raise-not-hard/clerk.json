@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W---W",
+    "turn": 1
+  },
+  {
+    "guess": "deter",
+    "expected_uncertainty_after_guess": 2.302359050536854,
+    "compatible": true,
+    "uncertainty_before_guess": 6.672425341971495,
+    "score": "-W--W",
+    "turn": 2
+  },
+  {
+    "guess": "clerk",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

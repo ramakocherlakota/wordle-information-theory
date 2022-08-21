@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "W--BB",
+    "turn": 1
+  },
+  {
+    "guess": "curse",
+    "expected_uncertainty_after_guess": 1.25,
+    "compatible": true,
+    "uncertainty_before_guess": 3,
+    "score": "--BBB",
+    "turn": 2
+  },
+  {
+    "guess": "horse",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "-BBBB",
+    "turn": 3
+  },
+  {
+    "guess": "worse",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

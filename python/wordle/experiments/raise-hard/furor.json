@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W----",
+    "turn": 1
+  },
+  {
+    "guess": "court",
+    "expected_uncertainty_after_guess": 1.980281589530189,
+    "compatible": true,
+    "uncertainty_before_guess": 6.6865005271832185,
+    "score": "-WWW-",
+    "turn": 2
+  },
+  {
+    "guess": "furor",
+    "expected_uncertainty_after_guess": 0.3333333333333333,
+    "compatible": true,
+    "uncertainty_before_guess": 2.584962500721156,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

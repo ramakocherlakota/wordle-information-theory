@@ -1,0 +1,36 @@
+[
+  {
+    "guess": "salon",
+    "score": "-BW--",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "----B",
+    "turn": 2
+  },
+  {
+    "guess": "eagle",
+    "expected_uncertainty_after_guess": 1.1887218755408673,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "-B-BB",
+    "turn": 3
+  },
+  {
+    "guess": "fable",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-B-BB",
+    "turn": 4
+  },
+  {
+    "guess": "ladle",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

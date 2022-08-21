@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W--B",
+    "turn": 1
+  },
+  {
+    "guess": "blade",
+    "expected_uncertainty_after_guess": 1.8648809697945603,
+    "compatible": true,
+    "uncertainty_before_guess": 5.357552004618084,
+    "score": "W-WWB",
+    "turn": 2
+  },
+  {
+    "guess": "adobe",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

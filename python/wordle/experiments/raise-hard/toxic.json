@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "--W--",
+    "turn": 1
+  },
+  {
+    "guess": "pilot",
+    "expected_uncertainty_after_guess": 2.0480493343503885,
+    "compatible": true,
+    "uncertainty_before_guess": 6.7414669864011465,
+    "score": "-W-WW",
+    "turn": 2
+  },
+  {
+    "guess": "tonic",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "BB-BB",
+    "turn": 3
+  },
+  {
+    "guess": "toxic",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

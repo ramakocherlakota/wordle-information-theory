@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B-W-",
+    "turn": 1
+  },
+  {
+    "guess": "tonal",
+    "expected_uncertainty_after_guess": 0.5754887502163469,
+    "compatible": false,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "---BB",
+    "turn": 2
+  },
+  {
+    "guess": "basal",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

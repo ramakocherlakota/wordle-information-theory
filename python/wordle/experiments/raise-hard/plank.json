@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W---",
+    "turn": 1
+  },
+  {
+    "guess": "float",
+    "expected_uncertainty_after_guess": 1.660336078803569,
+    "compatible": true,
+    "uncertainty_before_guess": 6.523561956057013,
+    "score": "-B-W-",
+    "turn": 2
+  },
+  {
+    "guess": "black",
+    "expected_uncertainty_after_guess": 0.5196067309356515,
+    "compatible": true,
+    "uncertainty_before_guess": 3.700439718141092,
+    "score": "-BB-B",
+    "turn": 3
+  },
+  {
+    "guess": "plank",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

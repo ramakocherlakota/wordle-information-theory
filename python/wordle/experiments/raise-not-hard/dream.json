@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "WW--W",
+    "turn": 1
+  },
+  {
+    "guess": "bleat",
+    "expected_uncertainty_after_guess": 1.2208757354213806,
+    "compatible": false,
+    "uncertainty_before_guess": 5.08746284125034,
+    "score": "--BB-",
+    "turn": 2
+  },
+  {
+    "guess": "comfy",
+    "expected_uncertainty_after_guess": 0.3333333333333333,
+    "compatible": false,
+    "uncertainty_before_guess": 2.584962500721156,
+    "score": "--W--",
+    "turn": 3
+  },
+  {
+    "guess": "dream",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W---",
+    "turn": 1
+  },
+  {
+    "guess": "float",
+    "expected_uncertainty_after_guess": 1.660336078803569,
+    "compatible": true,
+    "uncertainty_before_guess": 6.523561956057013,
+    "score": "--WW-",
+    "turn": 2
+  },
+  {
+    "guess": "comma",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "BB--W",
+    "turn": 3
+  },
+  {
+    "guess": "coach",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

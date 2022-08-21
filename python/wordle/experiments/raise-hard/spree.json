@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W--WB",
+    "turn": 1
+  },
+  {
+    "guess": "scree",
+    "expected_uncertainty_after_guess": 1.160964047443681,
+    "compatible": true,
+    "uncertainty_before_guess": 3.3219280948873626,
+    "score": "B-BBB",
+    "turn": 2
+  },
+  {
+    "guess": "spree",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

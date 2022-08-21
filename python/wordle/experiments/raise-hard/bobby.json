@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-----",
+    "turn": 1
+  },
+  {
+    "guess": "mulch",
+    "expected_uncertainty_after_guess": 2.1806654751000516,
+    "compatible": true,
+    "uncertainty_before_guess": 7.392317422778761,
+    "score": "-----",
+    "turn": 2
+  },
+  {
+    "guess": "goody",
+    "expected_uncertainty_after_guess": 0.75,
+    "compatible": true,
+    "uncertainty_before_guess": 4,
+    "score": "-B--B",
+    "turn": 3
+  },
+  {
+    "guess": "bobby",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

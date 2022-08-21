@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "W-B--",
+    "turn": 1
+  },
+  {
+    "guess": "crypt",
+    "expected_uncertainty_after_guess": 1.3046187504636004,
+    "compatible": false,
+    "uncertainty_before_guess": 4.807354922057604,
+    "score": "-B---",
+    "turn": 2
+  },
+  {
+    "guess": "drink",
+    "expected_uncertainty_after_guess": 0.4444444444444444,
+    "compatible": true,
+    "uncertainty_before_guess": 3.1699250014423126,
+    "score": "-BB-W",
+    "turn": 3
+  },
+  {
+    "guess": "krill",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

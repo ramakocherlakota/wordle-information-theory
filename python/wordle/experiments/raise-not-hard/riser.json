@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "B-WWW",
+    "turn": 1
+  },
+  {
+    "guess": "resin",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "BWBW-",
+    "turn": 2
+  },
+  {
+    "guess": "riser",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

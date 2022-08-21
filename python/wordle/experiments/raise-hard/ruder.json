@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "B---W",
+    "turn": 1
+  },
+  {
+    "guess": "ruler",
+    "expected_uncertainty_after_guess": 1.0377443751081734,
+    "compatible": true,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "BB-BB",
+    "turn": 2
+  },
+  {
+    "guess": "ruder",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

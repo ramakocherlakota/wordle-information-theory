@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B-B-",
+    "turn": 1
+  },
+  {
+    "guess": "salsa",
+    "expected_uncertainty_after_guess": 0.2857142857142857,
+    "compatible": true,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "-B-B-",
+    "turn": 2
+  },
+  {
+    "guess": "pansy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BB-BB",
+    "turn": 3
+  },
+  {
+    "guess": "patsy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

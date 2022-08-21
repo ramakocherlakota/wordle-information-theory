@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W--WB",
+    "turn": 1
+  },
+  {
+    "guess": "perch",
+    "expected_uncertainty_after_guess": 0.4754887502163469,
+    "compatible": false,
+    "uncertainty_before_guess": 3.3219280948873626,
+    "score": "-WW-W",
+    "turn": 2
+  },
+  {
+    "guess": "shore",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

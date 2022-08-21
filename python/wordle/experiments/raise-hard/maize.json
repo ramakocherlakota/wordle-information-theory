@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-BB-B",
+    "turn": 1
+  },
+  {
+    "guess": "naive",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-BB-B",
+    "turn": 2
+  },
+  {
+    "guess": "maize",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

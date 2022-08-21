@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "BW---",
+    "turn": 1
+  },
+  {
+    "guess": "royal",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "B--BB",
+    "turn": 2
+  },
+  {
+    "guess": "rural",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

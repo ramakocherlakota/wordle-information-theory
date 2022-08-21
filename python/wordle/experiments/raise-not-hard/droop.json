@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "W----",
+    "turn": 1
+  },
+  {
+    "guess": "count",
+    "expected_uncertainty_after_guess": 1.7456671690307346,
+    "compatible": false,
+    "uncertainty_before_guess": 6.6865005271832185,
+    "score": "-W---",
+    "turn": 2
+  },
+  {
+    "guess": "blood",
+    "expected_uncertainty_after_guess": 0.4,
+    "compatible": false,
+    "uncertainty_before_guess": 3.9068905956085187,
+    "score": "--BBW",
+    "turn": 3
+  },
+  {
+    "guess": "droop",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

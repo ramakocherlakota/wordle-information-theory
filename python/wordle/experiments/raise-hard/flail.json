@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-WW--",
+    "turn": 1
+  },
+  {
+    "guess": "tidal",
+    "expected_uncertainty_after_guess": 1.007784191367365,
+    "compatible": true,
+    "uncertainty_before_guess": 5.08746284125034,
+    "score": "-W-WB",
+    "turn": 2
+  },
+  {
+    "guess": "anvil",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "W--BB",
+    "turn": 3
+  },
+  {
+    "guess": "flail",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

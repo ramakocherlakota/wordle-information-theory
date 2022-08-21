@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W-B--",
+    "turn": 1
+  },
+  {
+    "guess": "crypt",
+    "expected_uncertainty_after_guess": 1.3046187504636004,
+    "compatible": false,
+    "uncertainty_before_guess": 4.807354922057604,
+    "score": "WB---",
+    "turn": 2
+  },
+  {
+    "guess": "brick",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

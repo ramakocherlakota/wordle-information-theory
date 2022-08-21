@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WB--W",
+    "turn": 1
+  },
+  {
+    "guess": "empty",
+    "expected_uncertainty_after_guess": 1.5005718725358397,
+    "compatible": false,
+    "uncertainty_before_guess": 4.807354922057604,
+    "score": "B--B-",
+    "turn": 2
+  },
+  {
+    "guess": "earth",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

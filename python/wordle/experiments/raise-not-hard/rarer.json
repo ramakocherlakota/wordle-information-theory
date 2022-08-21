@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "BB--W",
+    "turn": 1
+  },
+  {
+    "guess": "carve",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": false,
+    "uncertainty_before_guess": 2,
+    "score": "-BB-W",
+    "turn": 2
+  },
+  {
+    "guess": "rarer",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

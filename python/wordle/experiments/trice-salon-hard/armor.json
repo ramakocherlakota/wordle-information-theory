@@ -1,0 +1,36 @@
+[
+  {
+    "guess": "salon",
+    "score": "-W-B-",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "-B---",
+    "turn": 2
+  },
+  {
+    "guess": "arbor",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "BB-BB",
+    "turn": 3
+  },
+  {
+    "guess": "ardor",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BB-BB",
+    "turn": 4
+  },
+  {
+    "guess": "armor",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

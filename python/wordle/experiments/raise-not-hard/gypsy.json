@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "---B-",
+    "turn": 1
+  },
+  {
+    "guess": "floss",
+    "expected_uncertainty_after_guess": 0.47058823529411764,
+    "compatible": true,
+    "uncertainty_before_guess": 4.08746284125034,
+    "score": "---B-",
+    "turn": 2
+  },
+  {
+    "guess": "gypsy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W-WB",
+    "turn": 1
+  },
+  {
+    "guess": "slate",
+    "expected_uncertainty_after_guess": 1.8642106257572142,
+    "compatible": true,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "B-B-B",
+    "turn": 2
+  },
+  {
+    "guess": "spade",
+    "expected_uncertainty_after_guess": 1.289960052715201,
+    "compatible": true,
+    "uncertainty_before_guess": 3.1699250014423126,
+    "score": "B-B-B",
+    "turn": 3
+  },
+  {
+    "guess": "shake",
+    "expected_uncertainty_after_guess": 0.4,
+    "compatible": true,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "B-BBB",
+    "turn": 4
+  },
+  {
+    "guess": "snake",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

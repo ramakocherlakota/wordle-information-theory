@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WW-W-",
+    "turn": 1
+  },
+  {
+    "guess": "strap",
+    "expected_uncertainty_after_guess": 1.155460119356686,
+    "compatible": true,
+    "uncertainty_before_guess": 4.392317422778761,
+    "score": "B-WW-",
+    "turn": 2
+  },
+  {
+    "guess": "scarf",
+    "expected_uncertainty_after_guess": 1.3333333333333333,
+    "compatible": true,
+    "uncertainty_before_guess": 2.584962500721156,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

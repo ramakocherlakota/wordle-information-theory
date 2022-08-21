@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B-W-",
+    "turn": 1
+  },
+  {
+    "guess": "salon",
+    "expected_uncertainty_after_guess": 0.975488750216347,
+    "compatible": true,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "WBW--",
+    "turn": 2
+  },
+  {
+    "guess": "basal",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

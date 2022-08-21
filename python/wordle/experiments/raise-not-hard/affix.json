@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-WW--",
+    "turn": 1
+  },
+  {
+    "guess": "until",
+    "expected_uncertainty_after_guess": 0.7946926473133494,
+    "compatible": false,
+    "uncertainty_before_guess": 5.08746284125034,
+    "score": "---B-",
+    "turn": 2
+  },
+  {
+    "guess": "aphid",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "B--B-",
+    "turn": 3
+  },
+  {
+    "guess": "affix",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

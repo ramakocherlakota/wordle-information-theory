@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--W-W",
+    "turn": 1
+  },
+  {
+    "guess": "lipid",
+    "expected_uncertainty_after_guess": 1.0081203575755509,
+    "compatible": false,
+    "uncertainty_before_guess": 5.129283016944966,
+    "score": "---B-",
+    "turn": 2
+  },
+  {
+    "guess": "befit",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

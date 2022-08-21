@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W-WW",
+    "turn": 1
+  },
+  {
+    "guess": "steak",
+    "expected_uncertainty_after_guess": 0.5629072918469558,
+    "compatible": true,
+    "uncertainty_before_guess": 3.5849625007211565,
+    "score": "B-BBB",
+    "turn": 2
+  },
+  {
+    "guess": "sneak",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "B-BBB",
+    "turn": 3
+  },
+  {
+    "guess": "speak",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

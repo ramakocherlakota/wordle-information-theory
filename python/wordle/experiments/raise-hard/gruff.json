@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "W----",
+    "turn": 1
+  },
+  {
+    "guess": "court",
+    "expected_uncertainty_after_guess": 1.980281589530189,
+    "compatible": true,
+    "uncertainty_before_guess": 6.6865005271832185,
+    "score": "--BW-",
+    "turn": 2
+  },
+  {
+    "guess": "drunk",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-BB--",
+    "turn": 3
+  },
+  {
+    "guess": "gruff",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

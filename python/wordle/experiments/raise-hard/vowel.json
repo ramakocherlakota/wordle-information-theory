@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "----W",
+    "turn": 1
+  },
+  {
+    "guess": "betel",
+    "expected_uncertainty_after_guess": 1.856202065225583,
+    "compatible": true,
+    "uncertainty_before_guess": 6.9188632372745955,
+    "score": "---BB",
+    "turn": 2
+  },
+  {
+    "guess": "dowel",
+    "expected_uncertainty_after_guess": 0.4,
+    "compatible": true,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "-BBBB",
+    "turn": 3
+  },
+  {
+    "guess": "vowel",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "W--WB",
+    "turn": 1
+  },
+  {
+    "guess": "scree",
+    "expected_uncertainty_after_guess": 1.160964047443681,
+    "compatible": true,
+    "uncertainty_before_guess": 3.3219280948873626,
+    "score": "B-W-B",
+    "turn": 2
+  },
+  {
+    "guess": "shore",
+    "expected_uncertainty_after_guess": 1.6,
+    "compatible": true,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "B-BBB",
+    "turn": 3
+  },
+  {
+    "guess": "snore",
+    "expected_uncertainty_after_guess": 1.1887218755408673,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "B-BBB",
+    "turn": 4
+  },
+  {
+    "guess": "spore",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B-B-",
+    "turn": 1
+  },
+  {
+    "guess": "slept",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": false,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "WW---",
+    "turn": 2
+  },
+  {
+    "guess": "lasso",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

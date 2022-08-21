@@ -1,0 +1,63 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B---",
+    "turn": 1
+  },
+  {
+    "guess": "tangy",
+    "expected_uncertainty_after_guess": 2.4771834722280235,
+    "compatible": true,
+    "uncertainty_before_guess": 6.507794640198696,
+    "score": "WB---",
+    "turn": 2
+  },
+  {
+    "guess": "caput",
+    "expected_uncertainty_after_guess": 1.2007415749566777,
+    "compatible": true,
+    "uncertainty_before_guess": 3.700439718141092,
+    "score": "WB--W",
+    "turn": 3
+  },
+  {
+    "guess": "batch",
+    "expected_uncertainty_after_guess": 1.6,
+    "compatible": true,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "-BBBB",
+    "turn": 4
+  },
+  {
+    "guess": "hatch",
+    "expected_uncertainty_after_guess": 1.1887218755408673,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "-BBBB",
+    "turn": 5
+  },
+  {
+    "guess": "latch",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-BBBB",
+    "turn": 6
+  },
+  {
+    "guess": "match",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "-BBBB",
+    "turn": 7
+  },
+  {
+    "guess": "watch",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 8
+  }
+]

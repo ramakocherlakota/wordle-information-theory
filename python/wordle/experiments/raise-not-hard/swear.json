@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WW-WW",
+    "turn": 1
+  },
+  {
+    "guess": "champ",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": false,
+    "uncertainty_before_guess": 2,
+    "score": "--W--",
+    "turn": 2
+  },
+  {
+    "guess": "swear",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

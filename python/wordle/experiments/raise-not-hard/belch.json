@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "----W",
+    "turn": 1
+  },
+  {
+    "guess": "betel",
+    "expected_uncertainty_after_guess": 1.856202065225583,
+    "compatible": true,
+    "uncertainty_before_guess": 6.9188632372745955,
+    "score": "BB--W",
+    "turn": 2
+  },
+  {
+    "guess": "abhor",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": false,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-WW--",
+    "turn": 3
+  },
+  {
+    "guess": "belch",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

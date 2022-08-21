@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--W-B",
+    "turn": 1
+  },
+  {
+    "guess": "lingo",
+    "expected_uncertainty_after_guess": 0.9101955000865388,
+    "compatible": false,
+    "uncertainty_before_guess": 4.643856189774724,
+    "score": "-W--W",
+    "turn": 2
+  },
+  {
+    "guess": "movie",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

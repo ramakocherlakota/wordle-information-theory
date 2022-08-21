@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--B-B",
+    "turn": 1
+  },
+  {
+    "guess": "cloth",
+    "expected_uncertainty_after_guess": 0.6415168479201508,
+    "compatible": false,
+    "uncertainty_before_guess": 4.523561956057013,
+    "score": "W-W--",
+    "turn": 2
+  },
+  {
+    "guess": "voice",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

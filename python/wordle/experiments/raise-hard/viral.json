@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WWW--",
+    "turn": 1
+  },
+  {
+    "guess": "trail",
+    "expected_uncertainty_after_guess": 0.9308270834535262,
+    "compatible": true,
+    "uncertainty_before_guess": 4.169925001442312,
+    "score": "-WWWB",
+    "turn": 2
+  },
+  {
+    "guess": "viral",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

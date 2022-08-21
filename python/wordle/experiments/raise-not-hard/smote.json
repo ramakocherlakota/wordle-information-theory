@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "---WB",
+    "turn": 1
+  },
+  {
+    "guess": "month",
+    "expected_uncertainty_after_guess": 0.6770455884898199,
+    "compatible": false,
+    "uncertainty_before_guess": 4.08746284125034,
+    "score": "WW-B-",
+    "turn": 2
+  },
+  {
+    "guess": "smote",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

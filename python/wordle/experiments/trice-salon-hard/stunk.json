@@ -1,0 +1,36 @@
+[
+  {
+    "guess": "salon",
+    "score": "B---W",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "W----",
+    "turn": 2
+  },
+  {
+    "guess": "shunt",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "B-BBW",
+    "turn": 3
+  },
+  {
+    "guess": "stung",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBB-",
+    "turn": 4
+  },
+  {
+    "guess": "stunk",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

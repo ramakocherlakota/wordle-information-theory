@@ -1,0 +1,47 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B---",
+    "turn": 1
+  },
+  {
+    "guess": "tangy",
+    "expected_uncertainty_after_guess": 2.4771834722280235,
+    "compatible": true,
+    "uncertainty_before_guess": 6.507794640198696,
+    "score": "-BB-B",
+    "turn": 2
+  },
+  {
+    "guess": "candy",
+    "expected_uncertainty_after_guess": 1.1111111111111112,
+    "compatible": true,
+    "uncertainty_before_guess": 3.1699250014423126,
+    "score": "-BB-B",
+    "turn": 3
+  },
+  {
+    "guess": "fanny",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "-BB-B",
+    "turn": 4
+  },
+  {
+    "guess": "lanky",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "WBB-B",
+    "turn": 5
+  },
+  {
+    "guess": "manly",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 6
+  }
+]

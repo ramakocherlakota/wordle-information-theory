@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--B-B",
+    "turn": 1
+  },
+  {
+    "guess": "utile",
+    "expected_uncertainty_after_guess": 1.6308597827968234,
+    "compatible": true,
+    "uncertainty_before_guess": 4.523561956057013,
+    "score": "--BBB",
+    "turn": 2
+  },
+  {
+    "guess": "exile",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

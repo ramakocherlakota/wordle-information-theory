@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--WW-",
+    "turn": 1
+  },
+  {
+    "guess": "shout",
+    "expected_uncertainty_after_guess": 0.38095238095238093,
+    "compatible": false,
+    "uncertainty_before_guess": 4.392317422778761,
+    "score": "W-W--",
+    "turn": 2
+  },
+  {
+    "guess": "bison",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

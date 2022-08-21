@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "--B--",
+    "turn": 1
+  },
+  {
+    "guess": "glint",
+    "expected_uncertainty_after_guess": 1.5272610865084457,
+    "compatible": true,
+    "uncertainty_before_guess": 5.672425341971496,
+    "score": "WBBB-",
+    "turn": 2
+  },
+  {
+    "guess": "cling",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "-BBBB",
+    "turn": 3
+  },
+  {
+    "guess": "fling",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

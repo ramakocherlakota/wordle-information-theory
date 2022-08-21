@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-----",
+    "turn": 1
+  },
+  {
+    "guess": "mulch",
+    "expected_uncertainty_after_guess": 2.1806654751000516,
+    "compatible": true,
+    "uncertainty_before_guess": 7.392317422778761,
+    "score": "--B--",
+    "turn": 2
+  },
+  {
+    "guess": "dolly",
+    "expected_uncertainty_after_guess": 0.7924812503605781,
+    "compatible": true,
+    "uncertainty_before_guess": 2.584962500721156,
+    "score": "-BB-W",
+    "turn": 3
+  },
+  {
+    "guess": "polyp",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

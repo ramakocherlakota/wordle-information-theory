@@ -1,0 +1,55 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B-WB",
+    "turn": 1
+  },
+  {
+    "guess": "caste",
+    "expected_uncertainty_after_guess": 1.289960052715201,
+    "compatible": true,
+    "uncertainty_before_guess": 3.1699250014423126,
+    "score": "-BBBB",
+    "turn": 2
+  },
+  {
+    "guess": "baste",
+    "expected_uncertainty_after_guess": 1.6,
+    "compatible": true,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "-BBBB",
+    "turn": 3
+  },
+  {
+    "guess": "haste",
+    "expected_uncertainty_after_guess": 1.1887218755408673,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "-BBBB",
+    "turn": 4
+  },
+  {
+    "guess": "paste",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-BBBB",
+    "turn": 5
+  },
+  {
+    "guess": "taste",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "-BBBB",
+    "turn": 6
+  },
+  {
+    "guess": "waste",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 7
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "W---B",
+    "turn": 1
+  },
+  {
+    "guess": "trope",
+    "expected_uncertainty_after_guess": 1.6891907853824215,
+    "compatible": true,
+    "uncertainty_before_guess": 5.321928094887363,
+    "score": "-W--B",
+    "turn": 2
+  },
+  {
+    "guess": "nerve",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "-BBWB",
+    "turn": 3
+  },
+  {
+    "guess": "verge",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

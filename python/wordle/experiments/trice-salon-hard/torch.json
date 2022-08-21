@@ -1,0 +1,20 @@
+[
+  {
+    "guess": "salon",
+    "score": "---W-",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "BW-B-",
+    "turn": 2
+  },
+  {
+    "guess": "torch",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

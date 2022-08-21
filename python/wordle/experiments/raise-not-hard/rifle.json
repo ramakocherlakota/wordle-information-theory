@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "B-W-B",
+    "turn": 1
+  },
+  {
+    "guess": "ridge",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BB--B",
+    "turn": 2
+  },
+  {
+    "guess": "rifle",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

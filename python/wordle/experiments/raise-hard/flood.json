@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-----",
+    "turn": 1
+  },
+  {
+    "guess": "mulch",
+    "expected_uncertainty_after_guess": 2.1806654751000516,
+    "compatible": true,
+    "uncertainty_before_guess": 7.392317422778761,
+    "score": "--W--",
+    "turn": 2
+  },
+  {
+    "guess": "blown",
+    "expected_uncertainty_after_guess": 0.33963482158310493,
+    "compatible": true,
+    "uncertainty_before_guess": 3.8073549220576037,
+    "score": "-BB--",
+    "turn": 3
+  },
+  {
+    "guess": "flood",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

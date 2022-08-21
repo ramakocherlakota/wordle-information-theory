@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W-W-W",
+    "turn": 1
+  },
+  {
+    "guess": "diner",
+    "expected_uncertainty_after_guess": 1.5109312505824724,
+    "compatible": true,
+    "uncertainty_before_guess": 4.700439718141093,
+    "score": "-WWBB",
+    "turn": 2
+  },
+  {
+    "guess": "infer",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

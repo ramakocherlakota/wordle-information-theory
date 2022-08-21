@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W--B",
+    "turn": 1
+  },
+  {
+    "guess": "blade",
+    "expected_uncertainty_after_guess": 1.8648809697945603,
+    "compatible": true,
+    "uncertainty_before_guess": 5.357552004618084,
+    "score": "-BB-B",
+    "turn": 2
+  },
+  {
+    "guess": "plate",
+    "expected_uncertainty_after_guess": 0.9649839288804956,
+    "compatible": true,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "-BB-B",
+    "turn": 3
+  },
+  {
+    "guess": "flake",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

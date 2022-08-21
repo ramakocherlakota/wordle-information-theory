@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WW---",
+    "turn": 1
+  },
+  {
+    "guess": "crowd",
+    "expected_uncertainty_after_guess": 1.9100859078448604,
+    "compatible": false,
+    "uncertainty_before_guess": 6.285402218862249,
+    "score": "-B--B",
+    "turn": 2
+  },
+  {
+    "guess": "brand",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

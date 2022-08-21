@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "W-B-B",
+    "turn": 1
+  },
+  {
+    "guess": "tripe",
+    "expected_uncertainty_after_guess": 1.906257173915688,
+    "compatible": true,
+    "uncertainty_before_guess": 4.08746284125034,
+    "score": "-BB-B",
+    "turn": 2
+  },
+  {
+    "guess": "bride",
+    "expected_uncertainty_after_guess": 0.9649839288804956,
+    "compatible": true,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "-BB-B",
+    "turn": 3
+  },
+  {
+    "guess": "crime",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-BBBB",
+    "turn": 4
+  },
+  {
+    "guess": "grime",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

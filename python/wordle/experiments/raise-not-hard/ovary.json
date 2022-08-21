@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "WW---",
+    "turn": 1
+  },
+  {
+    "guess": "crowd",
+    "expected_uncertainty_after_guess": 1.9100859078448604,
+    "compatible": false,
+    "uncertainty_before_guess": 6.285402218862249,
+    "score": "-WW--",
+    "turn": 2
+  },
+  {
+    "guess": "polar",
+    "expected_uncertainty_after_guess": 0.2222222222222222,
+    "compatible": true,
+    "uncertainty_before_guess": 3.1699250014423126,
+    "score": "-W-WW",
+    "turn": 3
+  },
+  {
+    "guess": "ovary",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

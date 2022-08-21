@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "--W-B",
+    "turn": 1
+  },
+  {
+    "guess": "lingo",
+    "expected_uncertainty_after_guess": 0.9101955000865388,
+    "compatible": false,
+    "uncertainty_before_guess": 4.643856189774724,
+    "score": "-BW--",
+    "turn": 2
+  },
+  {
+    "guess": "niche",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBW-B",
+    "turn": 3
+  },
+  {
+    "guess": "niece",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

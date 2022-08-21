@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "W---W",
+    "turn": 1
+  },
+  {
+    "guess": "deter",
+    "expected_uncertainty_after_guess": 2.302359050536854,
+    "compatible": true,
+    "uncertainty_before_guess": 6.672425341971495,
+    "score": "-B-BB",
+    "turn": 2
+  },
+  {
+    "guess": "fever",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": true,
+    "uncertainty_before_guess": 2.584962500721156,
+    "score": "-BBBB",
+    "turn": 3
+  },
+  {
+    "guess": "lever",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

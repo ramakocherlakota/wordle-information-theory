@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "BW--W",
+    "turn": 1
+  },
+  {
+    "guess": "lymph",
+    "expected_uncertainty_after_guess": 0.5196067309356515,
+    "compatible": false,
+    "uncertainty_before_guess": 3.700439718141092,
+    "score": "W----",
+    "turn": 2
+  },
+  {
+    "guess": "regal",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "BB-BB",
+    "turn": 3
+  },
+  {
+    "guess": "renal",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

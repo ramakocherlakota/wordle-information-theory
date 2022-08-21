@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W-BWB",
+    "turn": 1
+  },
+  {
+    "guess": "shire",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "B-BBB",
+    "turn": 2
+  },
+  {
+    "guess": "spire",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

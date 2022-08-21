@@ -1,0 +1,28 @@
+[
+  {
+    "guess": "salon",
+    "score": "-W-WB",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "-B---",
+    "turn": 2
+  },
+  {
+    "guess": "groan",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "WBWBB",
+    "turn": 3
+  },
+  {
+    "guess": "organ",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

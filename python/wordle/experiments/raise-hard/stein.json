@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--WWW",
+    "turn": 1
+  },
+  {
+    "guess": "islet",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "WW-WW",
+    "turn": 2
+  },
+  {
+    "guess": "stein",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

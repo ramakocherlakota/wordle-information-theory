@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W-BW-",
+    "turn": 1
+  },
+  {
+    "guess": "shirk",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "B-BB-",
+    "turn": 2
+  },
+  {
+    "guess": "swirl",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

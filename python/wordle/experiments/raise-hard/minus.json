@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "--WW-",
+    "turn": 1
+  },
+  {
+    "guess": "stoic",
+    "expected_uncertainty_after_guess": 0.6792696431662099,
+    "compatible": true,
+    "uncertainty_before_guess": 4.392317422778761,
+    "score": "W--W-",
+    "turn": 2
+  },
+  {
+    "guess": "fishy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-BW--",
+    "turn": 3
+  },
+  {
+    "guess": "minus",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

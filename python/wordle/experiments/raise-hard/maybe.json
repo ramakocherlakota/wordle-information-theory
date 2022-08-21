@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B--B",
+    "turn": 1
+  },
+  {
+    "guess": "cable",
+    "expected_uncertainty_after_guess": 1.8892082876447596,
+    "compatible": true,
+    "uncertainty_before_guess": 4.700439718141093,
+    "score": "-BW-B",
+    "turn": 2
+  },
+  {
+    "guess": "badge",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "WB--B",
+    "turn": 3
+  },
+  {
+    "guess": "maybe",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

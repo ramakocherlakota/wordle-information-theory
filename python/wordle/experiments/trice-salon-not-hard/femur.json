@@ -1,0 +1,28 @@
+[
+  {
+    "guess": "salon",
+    "score": "-----",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "-W--W",
+    "turn": 2
+  },
+  {
+    "guess": "dumpy",
+    "expected_uncertainty_after_guess": 0.5545603261810205,
+    "compatible": false,
+    "uncertainty_before_guess": 4.523561956057013,
+    "score": "-WB--",
+    "turn": 3
+  },
+  {
+    "guess": "femur",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

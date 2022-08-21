@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "W---W",
+    "turn": 1
+  },
+  {
+    "guess": "deter",
+    "expected_uncertainty_after_guess": 2.302359050536854,
+    "compatible": true,
+    "uncertainty_before_guess": 6.672425341971495,
+    "score": "-B--W",
+    "turn": 2
+  },
+  {
+    "guess": "charm",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": false,
+    "uncertainty_before_guess": 3,
+    "score": "---W-",
+    "turn": 3
+  },
+  {
+    "guess": "jerky",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

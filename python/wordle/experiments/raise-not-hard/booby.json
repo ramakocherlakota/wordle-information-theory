@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "-----",
+    "turn": 1
+  },
+  {
+    "guess": "mulch",
+    "expected_uncertainty_after_guess": 2.1806654751000516,
+    "compatible": true,
+    "uncertainty_before_guess": 7.392317422778761,
+    "score": "-----",
+    "turn": 2
+  },
+  {
+    "guess": "goody",
+    "expected_uncertainty_after_guess": 0.75,
+    "compatible": true,
+    "uncertainty_before_guess": 4,
+    "score": "-BB-B",
+    "turn": 3
+  },
+  {
+    "guess": "abbot",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": false,
+    "uncertainty_before_guess": 2,
+    "score": "-WWW-",
+    "turn": 4
+  },
+  {
+    "guess": "booby",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

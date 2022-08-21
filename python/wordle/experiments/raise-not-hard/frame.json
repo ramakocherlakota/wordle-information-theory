@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "WW--B",
+    "turn": 1
+  },
+  {
+    "guess": "track",
+    "expected_uncertainty_after_guess": 1.5831253637973144,
+    "compatible": false,
+    "uncertainty_before_guess": 4.700439718141093,
+    "score": "-BB--",
+    "turn": 2
+  },
+  {
+    "guess": "pudgy",
+    "expected_uncertainty_after_guess": 0.5714285714285714,
+    "compatible": false,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "-----",
+    "turn": 3
+  },
+  {
+    "guess": "brave",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "-BB-B",
+    "turn": 4
+  },
+  {
+    "guess": "frame",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

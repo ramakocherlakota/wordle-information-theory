@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "---WB",
+    "turn": 1
+  },
+  {
+    "guess": "month",
+    "expected_uncertainty_after_guess": 0.6770455884898199,
+    "compatible": false,
+    "uncertainty_before_guess": 4.08746284125034,
+    "score": "--W--",
+    "turn": 2
+  },
+  {
+    "guess": "ensue",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "WWW-B",
+    "turn": 3
+  },
+  {
+    "guess": "scene",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

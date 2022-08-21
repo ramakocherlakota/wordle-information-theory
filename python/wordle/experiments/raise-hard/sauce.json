@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B-WB",
+    "turn": 1
+  },
+  {
+    "guess": "caste",
+    "expected_uncertainty_after_guess": 1.289960052715201,
+    "compatible": true,
+    "uncertainty_before_guess": 3.1699250014423126,
+    "score": "WBW-B",
+    "turn": 2
+  },
+  {
+    "guess": "sauce",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

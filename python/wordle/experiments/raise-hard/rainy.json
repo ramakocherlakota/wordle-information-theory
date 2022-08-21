@@ -1,0 +1,15 @@
+[
+  {
+    "guess": "raise",
+    "score": "BBB--",
+    "turn": 1
+  },
+  {
+    "guess": "rainy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 2
+  }
+]

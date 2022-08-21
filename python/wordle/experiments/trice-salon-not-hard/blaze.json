@@ -1,0 +1,36 @@
+[
+  {
+    "guess": "salon",
+    "score": "-WW--",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "----B",
+    "turn": 2
+  },
+  {
+    "guess": "blame",
+    "expected_uncertainty_after_guess": 0.6734528847818054,
+    "compatible": true,
+    "uncertainty_before_guess": 3.700439718141092,
+    "score": "BBB-B",
+    "turn": 3
+  },
+  {
+    "guess": "blade",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBB-B",
+    "turn": 4
+  },
+  {
+    "guess": "blaze",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

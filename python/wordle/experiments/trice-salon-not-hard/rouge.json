@@ -1,0 +1,28 @@
+[
+  {
+    "guess": "salon",
+    "score": "---W-",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "-W--B",
+    "turn": 2
+  },
+  {
+    "guess": "forge",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2.584962500721156,
+    "score": "-BWBB",
+    "turn": 3
+  },
+  {
+    "guess": "rouge",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

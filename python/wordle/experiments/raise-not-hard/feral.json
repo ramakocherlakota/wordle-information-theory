@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WW--W",
+    "turn": 1
+  },
+  {
+    "guess": "bleat",
+    "expected_uncertainty_after_guess": 1.2208757354213806,
+    "compatible": false,
+    "uncertainty_before_guess": 5.08746284125034,
+    "score": "-WWB-",
+    "turn": 2
+  },
+  {
+    "guess": "feral",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

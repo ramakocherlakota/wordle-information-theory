@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "---BB",
+    "turn": 1
+  },
+  {
+    "guess": "cloth",
+    "expected_uncertainty_after_guess": 0.7132331253245203,
+    "compatible": false,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "-----",
+    "turn": 2
+  },
+  {
+    "guess": "dense",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-BBBB",
+    "turn": 3
+  },
+  {
+    "guess": "sense",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

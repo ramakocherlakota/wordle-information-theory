@@ -1,0 +1,28 @@
+[
+  {
+    "guess": "salon",
+    "score": "-W---",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "---BW",
+    "turn": 2
+  },
+  {
+    "guess": "beach",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-BWB-",
+    "turn": 3
+  },
+  {
+    "guess": "mecca",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

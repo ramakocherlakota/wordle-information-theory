@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B---",
+    "turn": 1
+  },
+  {
+    "guess": "count",
+    "expected_uncertainty_after_guess": 2.2958586141640596,
+    "compatible": false,
+    "uncertainty_before_guess": 6.507794640198696,
+    "score": "--BBB",
+    "turn": 2
+  },
+  {
+    "guess": "dough",
+    "expected_uncertainty_after_guess": 0.7924812503605781,
+    "compatible": false,
+    "uncertainty_before_guess": 2.584962500721156,
+    "score": "--B--",
+    "turn": 3
+  },
+  {
+    "guess": "jetty",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": false,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "--W--",
+    "turn": 4
+  },
+  {
+    "guess": "vaunt",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

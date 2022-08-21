@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B--B",
+    "turn": 1
+  },
+  {
+    "guess": "gulch",
+    "expected_uncertainty_after_guess": 0.6772938644014157,
+    "compatible": false,
+    "uncertainty_before_guess": 4.700439718141093,
+    "score": "----W",
+    "turn": 2
+  },
+  {
+    "guess": "bathe",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

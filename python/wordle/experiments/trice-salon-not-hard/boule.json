@@ -1,0 +1,28 @@
+[
+  {
+    "guess": "salon",
+    "score": "--WW-",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "----B",
+    "turn": 2
+  },
+  {
+    "guess": "globe",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "-WWWB",
+    "turn": 3
+  },
+  {
+    "guess": "boule",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "W-W-W",
+    "turn": 1
+  },
+  {
+    "guess": "vinyl",
+    "expected_uncertainty_after_guess": 1.2754330561050067,
+    "compatible": false,
+    "uncertainty_before_guess": 4.700439718141093,
+    "score": "-BB--",
+    "turn": 2
+  },
+  {
+    "guess": "admin",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": false,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "--WWW",
+    "turn": 3
+  },
+  {
+    "guess": "miner",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

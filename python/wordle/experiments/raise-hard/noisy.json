@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--BB-",
+    "turn": 1
+  },
+  {
+    "guess": "hoist",
+    "expected_uncertainty_after_guess": 0.750543055795941,
+    "compatible": true,
+    "uncertainty_before_guess": 3.1699250014423126,
+    "score": "-BBB-",
+    "turn": 2
+  },
+  {
+    "guess": "noisy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

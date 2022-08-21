@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-BW--",
+    "turn": 1
+  },
+  {
+    "guess": "panic",
+    "expected_uncertainty_after_guess": 0.7142857142857143,
+    "compatible": true,
+    "uncertainty_before_guess": 3.8073549220576037,
+    "score": "-BWBW",
+    "turn": 2
+  },
+  {
+    "guess": "cabin",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

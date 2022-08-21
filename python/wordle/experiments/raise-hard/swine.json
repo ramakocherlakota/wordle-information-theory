@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "--BWB",
+    "turn": 1
+  },
+  {
+    "guess": "snipe",
+    "expected_uncertainty_after_guess": 1.7604247971044464,
+    "compatible": true,
+    "uncertainty_before_guess": 3.9068905956085187,
+    "score": "BWB-B",
+    "turn": 2
+  },
+  {
+    "guess": "shine",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "B-BBB",
+    "turn": 3
+  },
+  {
+    "guess": "swine",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

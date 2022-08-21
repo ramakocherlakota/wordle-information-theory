@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "----B",
+    "turn": 1
+  },
+  {
+    "guess": "lunge",
+    "expected_uncertainty_after_guess": 1.7012202870625794,
+    "compatible": true,
+    "uncertainty_before_guess": 5.930737337562887,
+    "score": "WW--B",
+    "turn": 2
+  },
+  {
+    "guess": "flume",
+    "expected_uncertainty_after_guess": 0.3333333333333333,
+    "compatible": true,
+    "uncertainty_before_guess": 2.584962500721156,
+    "score": "-BBBB",
+    "turn": 3
+  },
+  {
+    "guess": "plume",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WBB--",
+    "turn": 1
+  },
+  {
+    "guess": "dairy",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "-BBBB",
+    "turn": 2
+  },
+  {
+    "guess": "fairy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

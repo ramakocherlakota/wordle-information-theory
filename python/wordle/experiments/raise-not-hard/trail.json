@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "WWW--",
+    "turn": 1
+  },
+  {
+    "guess": "gland",
+    "expected_uncertainty_after_guess": 0.5974937501201928,
+    "compatible": false,
+    "uncertainty_before_guess": 4.169925001442312,
+    "score": "-WB--",
+    "turn": 2
+  },
+  {
+    "guess": "frail",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "-BBBB",
+    "turn": 3
+  },
+  {
+    "guess": "trail",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

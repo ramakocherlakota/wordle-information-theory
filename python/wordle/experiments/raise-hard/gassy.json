@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B-B-",
+    "turn": 1
+  },
+  {
+    "guess": "salsa",
+    "expected_uncertainty_after_guess": 0.2857142857142857,
+    "compatible": true,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "WB-B-",
+    "turn": 2
+  },
+  {
+    "guess": "gassy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

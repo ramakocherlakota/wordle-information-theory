@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "B---W",
+    "turn": 1
+  },
+  {
+    "guess": "ruler",
+    "expected_uncertainty_after_guess": 1.0377443751081734,
+    "compatible": true,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "B--B-",
+    "turn": 2
+  },
+  {
+    "guess": "renew",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "B--B-",
+    "turn": 3
+  },
+  {
+    "guess": "rodeo",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

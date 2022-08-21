@@ -1,0 +1,36 @@
+[
+  {
+    "guess": "salon",
+    "score": "-B---",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "-W--W",
+    "turn": 2
+  },
+  {
+    "guess": "gawky",
+    "expected_uncertainty_after_guess": 1,
+    "compatible": false,
+    "uncertainty_before_guess": 3.8073549220576037,
+    "score": "-B---",
+    "turn": 3
+  },
+  {
+    "guess": "paper",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "-B-BW",
+    "turn": 4
+  },
+  {
+    "guess": "harem",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

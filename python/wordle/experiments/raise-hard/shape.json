@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W-WB",
+    "turn": 1
+  },
+  {
+    "guess": "slate",
+    "expected_uncertainty_after_guess": 1.8642106257572142,
+    "compatible": true,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "B-B-B",
+    "turn": 2
+  },
+  {
+    "guess": "spade",
+    "expected_uncertainty_after_guess": 1.289960052715201,
+    "compatible": true,
+    "uncertainty_before_guess": 3.1699250014423126,
+    "score": "BWB-B",
+    "turn": 3
+  },
+  {
+    "guess": "shape",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

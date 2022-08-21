@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "--BW-",
+    "turn": 1
+  },
+  {
+    "guess": "knelt",
+    "expected_uncertainty_after_guess": 0.9746435347065657,
+    "compatible": false,
+    "uncertainty_before_guess": 4.857980995127573,
+    "score": "-W---",
+    "turn": 2
+  },
+  {
+    "guess": "duchy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": false,
+    "uncertainty_before_guess": 2.584962500721156,
+    "score": "---WB",
+    "turn": 3
+  },
+  {
+    "guess": "shiny",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

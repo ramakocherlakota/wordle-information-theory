@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "----W",
+    "turn": 1
+  },
+  {
+    "guess": "betel",
+    "expected_uncertainty_after_guess": 1.856202065225583,
+    "compatible": true,
+    "uncertainty_before_guess": 6.9188632372745955,
+    "score": "-W-WW",
+    "turn": 2
+  },
+  {
+    "guess": "elegy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

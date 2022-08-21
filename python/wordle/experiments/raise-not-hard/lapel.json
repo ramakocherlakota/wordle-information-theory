@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B--W",
+    "turn": 1
+  },
+  {
+    "guess": "notch",
+    "expected_uncertainty_after_guess": 0.8377443751081735,
+    "compatible": false,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "-----",
+    "turn": 2
+  },
+  {
+    "guess": "bagel",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "-B-BB",
+    "turn": 3
+  },
+  {
+    "guess": "lapel",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

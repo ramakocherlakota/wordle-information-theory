@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--W-W",
+    "turn": 1
+  },
+  {
+    "guess": "linen",
+    "expected_uncertainty_after_guess": 1.1404613417398182,
+    "compatible": true,
+    "uncertainty_before_guess": 5.129283016944966,
+    "score": "WW-W-",
+    "turn": 2
+  },
+  {
+    "guess": "devil",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

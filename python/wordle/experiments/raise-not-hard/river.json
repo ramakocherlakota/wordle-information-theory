@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "B-W-W",
+    "turn": 1
+  },
+  {
+    "guess": "caper",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": false,
+    "uncertainty_before_guess": 3,
+    "score": "---BB",
+    "turn": 2
+  },
+  {
+    "guess": "rider",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BB-BB",
+    "turn": 3
+  },
+  {
+    "guess": "river",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

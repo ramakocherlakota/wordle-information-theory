@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B--W",
+    "turn": 1
+  },
+  {
+    "guess": "navel",
+    "expected_uncertainty_after_guess": 1.560964047443681,
+    "compatible": true,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "WB-B-",
+    "turn": 2
+  },
+  {
+    "guess": "taken",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "WB-BB",
+    "turn": 3
+  },
+  {
+    "guess": "eaten",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

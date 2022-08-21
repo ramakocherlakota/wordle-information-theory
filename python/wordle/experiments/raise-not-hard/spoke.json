@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "---WB",
+    "turn": 1
+  },
+  {
+    "guess": "month",
+    "expected_uncertainty_after_guess": 0.6770455884898199,
+    "compatible": false,
+    "uncertainty_before_guess": 4.08746284125034,
+    "score": "-W---",
+    "turn": 2
+  },
+  {
+    "guess": "scope",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "B-BWB",
+    "turn": 3
+  },
+  {
+    "guess": "spoke",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B---",
+    "turn": 1
+  },
+  {
+    "guess": "tangy",
+    "expected_uncertainty_after_guess": 2.4771834722280235,
+    "compatible": true,
+    "uncertainty_before_guess": 6.507794640198696,
+    "score": "-B--B",
+    "turn": 2
+  },
+  {
+    "guess": "bawdy",
+    "expected_uncertainty_after_guess": 0.8853673080251491,
+    "compatible": true,
+    "uncertainty_before_guess": 3.700439718141092,
+    "score": "WB--B",
+    "turn": 3
+  },
+  {
+    "guess": "cabby",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "W--WW",
+    "turn": 1
+  },
+  {
+    "guess": "sheep",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": false,
+    "uncertainty_before_guess": 4.169925001442312,
+    "score": "B-BB-",
+    "turn": 2
+  },
+  {
+    "guess": "sneer",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "B-BBB",
+    "turn": 3
+  },
+  {
+    "guess": "steer",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

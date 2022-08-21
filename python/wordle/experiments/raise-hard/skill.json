@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "--BW-",
+    "turn": 1
+  },
+  {
+    "guess": "stink",
+    "expected_uncertainty_after_guess": 1.5298113095379406,
+    "compatible": true,
+    "uncertainty_before_guess": 4.857980995127573,
+    "score": "B-B-W",
+    "turn": 2
+  },
+  {
+    "guess": "skiff",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "BBB--",
+    "turn": 3
+  },
+  {
+    "guess": "skill",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

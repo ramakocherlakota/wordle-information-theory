@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "W---W",
+    "turn": 1
+  },
+  {
+    "guess": "deter",
+    "expected_uncertainty_after_guess": 2.302359050536854,
+    "compatible": true,
+    "uncertainty_before_guess": 6.672425341971495,
+    "score": "---BB",
+    "turn": 2
+  },
+  {
+    "guess": "clown",
+    "expected_uncertainty_after_guess": 1.4615384615384615,
+    "compatible": false,
+    "uncertainty_before_guess": 4.700439718141093,
+    "score": "--W--",
+    "turn": 3
+  },
+  {
+    "guess": "jumpy",
+    "expected_uncertainty_after_guess": 0.5943609377704336,
+    "compatible": false,
+    "uncertainty_before_guess": 3,
+    "score": "--B--",
+    "turn": 4
+  },
+  {
+    "guess": "homer",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

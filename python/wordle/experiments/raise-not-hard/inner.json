@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W-W-W",
+    "turn": 1
+  },
+  {
+    "guess": "vinyl",
+    "expected_uncertainty_after_guess": 1.2754330561050067,
+    "compatible": false,
+    "uncertainty_before_guess": 4.700439718141093,
+    "score": "-WB--",
+    "turn": 2
+  },
+  {
+    "guess": "inner",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

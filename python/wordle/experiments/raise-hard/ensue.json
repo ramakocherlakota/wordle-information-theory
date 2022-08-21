@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "---WB",
+    "turn": 1
+  },
+  {
+    "guess": "stone",
+    "expected_uncertainty_after_guess": 1.0802663515647222,
+    "compatible": true,
+    "uncertainty_before_guess": 4.08746284125034,
+    "score": "W--WB",
+    "turn": 2
+  },
+  {
+    "guess": "ensue",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

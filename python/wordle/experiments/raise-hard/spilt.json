@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "--BW-",
+    "turn": 1
+  },
+  {
+    "guess": "stink",
+    "expected_uncertainty_after_guess": 1.5298113095379406,
+    "compatible": true,
+    "uncertainty_before_guess": 4.857980995127573,
+    "score": "BWB--",
+    "turn": 2
+  },
+  {
+    "guess": "shift",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "B-B-B",
+    "turn": 3
+  },
+  {
+    "guess": "spilt",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

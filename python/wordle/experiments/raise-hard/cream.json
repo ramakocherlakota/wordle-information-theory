@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "WW--W",
+    "turn": 1
+  },
+  {
+    "guess": "alert",
+    "expected_uncertainty_after_guess": 1.4224861169588316,
+    "compatible": true,
+    "uncertainty_before_guess": 5.08746284125034,
+    "score": "W-BW-",
+    "turn": 2
+  },
+  {
+    "guess": "bread",
+    "expected_uncertainty_after_guess": 1,
+    "compatible": true,
+    "uncertainty_before_guess": 3,
+    "score": "-BBB-",
+    "turn": 3
+  },
+  {
+    "guess": "creak",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "BBBB-",
+    "turn": 4
+  },
+  {
+    "guess": "cream",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

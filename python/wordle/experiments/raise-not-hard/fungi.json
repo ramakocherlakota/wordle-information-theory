@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "--W--",
+    "turn": 1
+  },
+  {
+    "guess": "pilot",
+    "expected_uncertainty_after_guess": 2.0480493343503885,
+    "compatible": true,
+    "uncertainty_before_guess": 6.7414669864011465,
+    "score": "-W---",
+    "turn": 2
+  },
+  {
+    "guess": "cubic",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2.584962500721156,
+    "score": "-B-W-",
+    "turn": 3
+  },
+  {
+    "guess": "fungi",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

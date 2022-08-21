@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-BW--",
+    "turn": 1
+  },
+  {
+    "guess": "panic",
+    "expected_uncertainty_after_guess": 0.7142857142857143,
+    "compatible": true,
+    "uncertainty_before_guess": 3.8073549220576037,
+    "score": "-B-B-",
+    "turn": 2
+  },
+  {
+    "guess": "mafia",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "BB-B-",
+    "turn": 3
+  },
+  {
+    "guess": "maxim",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "W---W",
+    "turn": 1
+  },
+  {
+    "guess": "deter",
+    "expected_uncertainty_after_guess": 2.302359050536854,
+    "compatible": true,
+    "uncertainty_before_guess": 6.672425341971495,
+    "score": "---BB",
+    "turn": 2
+  },
+  {
+    "guess": "cower",
+    "expected_uncertainty_after_guess": 1.9536149045950468,
+    "compatible": true,
+    "uncertainty_before_guess": 4.700439718141093,
+    "score": "-BWBB",
+    "turn": 3
+  },
+  {
+    "guess": "wooer",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

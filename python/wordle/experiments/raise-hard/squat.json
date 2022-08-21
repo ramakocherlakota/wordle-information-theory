@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W-W-",
+    "turn": 1
+  },
+  {
+    "guess": "stalk",
+    "expected_uncertainty_after_guess": 1.2812461379023452,
+    "compatible": true,
+    "uncertainty_before_guess": 5.426264754702098,
+    "score": "BWW--",
+    "turn": 2
+  },
+  {
+    "guess": "squat",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

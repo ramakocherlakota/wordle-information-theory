@@ -1,0 +1,44 @@
+[
+  {
+    "guess": "salon",
+    "score": "---WW",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "-----",
+    "turn": 2
+  },
+  {
+    "guess": "phony",
+    "expected_uncertainty_after_guess": 0.8,
+    "compatible": true,
+    "uncertainty_before_guess": 3.3219280948873626,
+    "score": "--WB-",
+    "turn": 3
+  },
+  {
+    "guess": "album",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": false,
+    "uncertainty_before_guess": 2,
+    "score": "---W-",
+    "turn": 4
+  },
+  {
+    "guess": "found",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "-BBBB",
+    "turn": 5
+  },
+  {
+    "guess": "wound",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 6
+  }
+]

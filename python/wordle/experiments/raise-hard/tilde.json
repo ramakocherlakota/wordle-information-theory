@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--W-B",
+    "turn": 1
+  },
+  {
+    "guess": "binge",
+    "expected_uncertainty_after_guess": 1.36,
+    "compatible": true,
+    "uncertainty_before_guess": 4.643856189774724,
+    "score": "-B--B",
+    "turn": 2
+  },
+  {
+    "guess": "tilde",
+    "expected_uncertainty_after_guess": 0.5943609377704336,
+    "compatible": true,
+    "uncertainty_before_guess": 3,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

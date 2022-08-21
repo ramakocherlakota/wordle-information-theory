@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WW--B",
+    "turn": 1
+  },
+  {
+    "guess": "track",
+    "expected_uncertainty_after_guess": 1.5831253637973144,
+    "compatible": false,
+    "uncertainty_before_guess": 4.700439718141093,
+    "score": "WBBW-",
+    "turn": 2
+  },
+  {
+    "guess": "crate",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

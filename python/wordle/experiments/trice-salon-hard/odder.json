@@ -1,0 +1,28 @@
+[
+  {
+    "guess": "salon",
+    "score": "---W-",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "-W--W",
+    "turn": 2
+  },
+  {
+    "guess": "mower",
+    "expected_uncertainty_after_guess": 1.4782177784002017,
+    "compatible": true,
+    "uncertainty_before_guess": 4,
+    "score": "-W-BB",
+    "turn": 3
+  },
+  {
+    "guess": "odder",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

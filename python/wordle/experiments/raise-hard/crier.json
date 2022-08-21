@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W-B-W",
+    "turn": 1
+  },
+  {
+    "guess": "fried",
+    "expected_uncertainty_after_guess": 0.8333333333333334,
+    "compatible": true,
+    "uncertainty_before_guess": 3.5849625007211565,
+    "score": "-BBB-",
+    "turn": 2
+  },
+  {
+    "guess": "crier",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

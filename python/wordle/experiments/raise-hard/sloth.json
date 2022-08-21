@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "---W-",
+    "turn": 1
+  },
+  {
+    "guess": "stunk",
+    "expected_uncertainty_after_guess": 1.823917537477937,
+    "compatible": true,
+    "uncertainty_before_guess": 6.321928094887362,
+    "score": "BW---",
+    "turn": 2
+  },
+  {
+    "guess": "shoot",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "BWB-W",
+    "turn": 3
+  },
+  {
+    "guess": "sloth",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

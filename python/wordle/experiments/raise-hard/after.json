@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WW--W",
+    "turn": 1
+  },
+  {
+    "guess": "alert",
+    "expected_uncertainty_after_guess": 1.4224861169588316,
+    "compatible": true,
+    "uncertainty_before_guess": 5.08746284125034,
+    "score": "B-WWW",
+    "turn": 2
+  },
+  {
+    "guess": "after",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

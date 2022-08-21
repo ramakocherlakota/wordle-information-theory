@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B--W",
+    "turn": 1
+  },
+  {
+    "guess": "navel",
+    "expected_uncertainty_after_guess": 1.560964047443681,
+    "compatible": true,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "-B-BB",
+    "turn": 2
+  },
+  {
+    "guess": "label",
+    "expected_uncertainty_after_guess": 0.4,
+    "compatible": true,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "-B-BB",
+    "turn": 3
+  },
+  {
+    "guess": "camel",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

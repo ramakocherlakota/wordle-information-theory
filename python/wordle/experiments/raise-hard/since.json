@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--WWB",
+    "turn": 1
+  },
+  {
+    "guess": "siege",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "BB--B",
+    "turn": 2
+  },
+  {
+    "guess": "since",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

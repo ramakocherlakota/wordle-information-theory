@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "---BB",
+    "turn": 1
+  },
+  {
+    "guess": "loose",
+    "expected_uncertainty_after_guess": 1.4559707739381875,
+    "compatible": true,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "-B-BB",
+    "turn": 2
+  },
+  {
+    "guess": "copse",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "-B-BB",
+    "turn": 3
+  },
+  {
+    "guess": "house",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "-BBBB",
+    "turn": 4
+  },
+  {
+    "guess": "mouse",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

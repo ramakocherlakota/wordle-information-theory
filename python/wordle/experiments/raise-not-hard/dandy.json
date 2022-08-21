@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-B---",
+    "turn": 1
+  },
+  {
+    "guess": "count",
+    "expected_uncertainty_after_guess": 2.2958586141640596,
+    "compatible": false,
+    "uncertainty_before_guess": 6.507794640198696,
+    "score": "---W-",
+    "turn": 2
+  },
+  {
+    "guess": "manly",
+    "expected_uncertainty_after_guess": 0.2222222222222222,
+    "compatible": true,
+    "uncertainty_before_guess": 3.1699250014423126,
+    "score": "-BB-B",
+    "turn": 3
+  },
+  {
+    "guess": "dandy",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

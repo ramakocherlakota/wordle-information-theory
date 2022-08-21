@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "----W",
+    "turn": 1
+  },
+  {
+    "guess": "betel",
+    "expected_uncertainty_after_guess": 1.856202065225583,
+    "compatible": true,
+    "uncertainty_before_guess": 6.9188632372745955,
+    "score": "---B-",
+    "turn": 2
+  },
+  {
+    "guess": "women",
+    "expected_uncertainty_after_guess": 0.6253491072973907,
+    "compatible": true,
+    "uncertainty_before_guess": 3.8073549220576037,
+    "score": "-B-B-",
+    "turn": 3
+  },
+  {
+    "guess": "covey",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-B-BB",
+    "turn": 4
+  },
+  {
+    "guess": "dopey",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

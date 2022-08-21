@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W-BB",
+    "turn": 1
+  },
+  {
+    "guess": "cease",
+    "expected_uncertainty_after_guess": 0.75,
+    "compatible": true,
+    "uncertainty_before_guess": 3,
+    "score": "--BBB",
+    "turn": 2
+  },
+  {
+    "guess": "abase",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "--BBB",
+    "turn": 3
+  },
+  {
+    "guess": "phase",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

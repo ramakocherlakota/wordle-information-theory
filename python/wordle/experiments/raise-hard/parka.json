@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "WB---",
+    "turn": 1
+  },
+  {
+    "guess": "party",
+    "expected_uncertainty_after_guess": 1.5776750003328412,
+    "compatible": true,
+    "uncertainty_before_guess": 4.700439718141093,
+    "score": "BBB--",
+    "turn": 2
+  },
+  {
+    "guess": "parka",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

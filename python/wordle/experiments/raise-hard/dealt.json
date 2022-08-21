@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W--W",
+    "turn": 1
+  },
+  {
+    "guess": "cleat",
+    "expected_uncertainty_after_guess": 1.471722826400503,
+    "compatible": true,
+    "uncertainty_before_guess": 6.10852445677817,
+    "score": "-WWWB",
+    "turn": 2
+  },
+  {
+    "guess": "leant",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "WBB-B",
+    "turn": 3
+  },
+  {
+    "guess": "dealt",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "guess": "salon",
+    "score": "B-W--",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "----W",
+    "turn": 2
+  },
+  {
+    "guess": "impel",
+    "expected_uncertainty_after_guess": 0.2857142857142857,
+    "compatible": false,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "---WB",
+    "turn": 3
+  },
+  {
+    "guess": "shell",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "B-BBB",
+    "turn": 4
+  },
+  {
+    "guess": "swell",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

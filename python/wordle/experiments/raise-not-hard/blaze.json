@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W--B",
+    "turn": 1
+  },
+  {
+    "guess": "plant",
+    "expected_uncertainty_after_guess": 1.5221066330869928,
+    "compatible": false,
+    "uncertainty_before_guess": 5.357552004618084,
+    "score": "-BB--",
+    "turn": 2
+  },
+  {
+    "guess": "embed",
+    "expected_uncertainty_after_guess": 0.2857142857142857,
+    "compatible": false,
+    "uncertainty_before_guess": 2.807354922057604,
+    "score": "W-W--",
+    "turn": 3
+  },
+  {
+    "guess": "blaze",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

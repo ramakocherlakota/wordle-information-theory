@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "--B--",
+    "turn": 1
+  },
+  {
+    "guess": "blunt",
+    "expected_uncertainty_after_guess": 1.385706558099159,
+    "compatible": false,
+    "uncertainty_before_guess": 5.672425341971496,
+    "score": "-----",
+    "turn": 2
+  },
+  {
+    "guess": "chick",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

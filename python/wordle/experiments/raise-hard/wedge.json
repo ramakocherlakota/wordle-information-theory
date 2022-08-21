@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "----B",
+    "turn": 1
+  },
+  {
+    "guess": "lunge",
+    "expected_uncertainty_after_guess": 1.7012202870625794,
+    "compatible": true,
+    "uncertainty_before_guess": 5.930737337562887,
+    "score": "---BB",
+    "turn": 2
+  },
+  {
+    "guess": "hedge",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-BBBB",
+    "turn": 3
+  },
+  {
+    "guess": "wedge",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

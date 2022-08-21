@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "--W-W",
+    "turn": 1
+  },
+  {
+    "guess": "lipid",
+    "expected_uncertainty_after_guess": 1.0081203575755509,
+    "compatible": false,
+    "uncertainty_before_guess": 5.129283016944966,
+    "score": "W--B-",
+    "turn": 2
+  },
+  {
+    "guess": "elfin",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "WW-B-",
+    "turn": 3
+  },
+  {
+    "guess": "helix",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

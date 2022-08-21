@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "----W",
+    "turn": 1
+  },
+  {
+    "guess": "betel",
+    "expected_uncertainty_after_guess": 1.856202065225583,
+    "compatible": true,
+    "uncertainty_before_guess": 6.9188632372745955,
+    "score": "-B--W",
+    "turn": 2
+  },
+  {
+    "guess": "cello",
+    "expected_uncertainty_after_guess": 0.2222222222222222,
+    "compatible": true,
+    "uncertainty_before_guess": 3.1699250014423126,
+    "score": "-BB-W",
+    "turn": 3
+  },
+  {
+    "guess": "felon",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "-BBBB",
+    "turn": 4
+  },
+  {
+    "guess": "melon",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

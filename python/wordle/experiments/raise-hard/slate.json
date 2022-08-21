@@ -1,0 +1,15 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W-WB",
+    "turn": 1
+  },
+  {
+    "guess": "slate",
+    "expected_uncertainty_after_guess": 1.8642106257572142,
+    "compatible": true,
+    "uncertainty_before_guess": 4.321928094887363,
+    "score": "BBBBB",
+    "turn": 2
+  }
+]

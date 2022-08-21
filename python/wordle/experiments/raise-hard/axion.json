@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-WB--",
+    "turn": 1
+  },
+  {
+    "guess": "align",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 3.5849625007211565,
+    "score": "B-B-B",
+    "turn": 2
+  },
+  {
+    "guess": "avian",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "B-B-B",
+    "turn": 3
+  },
+  {
+    "guess": "axion",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

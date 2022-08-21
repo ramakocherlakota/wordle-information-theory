@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W-W-",
+    "turn": 1
+  },
+  {
+    "guess": "plant",
+    "expected_uncertainty_after_guess": 1.1797454872837339,
+    "compatible": false,
+    "uncertainty_before_guess": 5.426264754702098,
+    "score": "--B--",
+    "turn": 2
+  },
+  {
+    "guess": "shack",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

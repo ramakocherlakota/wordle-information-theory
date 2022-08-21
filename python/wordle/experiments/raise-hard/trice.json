@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "W-B-B",
+    "turn": 1
+  },
+  {
+    "guess": "tripe",
+    "expected_uncertainty_after_guess": 1.906257173915688,
+    "compatible": true,
+    "uncertainty_before_guess": 4.08746284125034,
+    "score": "BBB-B",
+    "turn": 2
+  },
+  {
+    "guess": "tribe",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "BBB-B",
+    "turn": 3
+  },
+  {
+    "guess": "trice",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

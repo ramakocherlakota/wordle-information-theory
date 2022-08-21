@@ -1,0 +1,60 @@
+[
+  {
+    "guess": "salon",
+    "score": "-B---",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "W--B-",
+    "turn": 2
+  },
+  {
+    "guess": "batch",
+    "expected_uncertainty_after_guess": 1.9349400790728017,
+    "compatible": true,
+    "uncertainty_before_guess": 2.584962500721156,
+    "score": "-BBBB",
+    "turn": 3
+  },
+  {
+    "guess": "catch",
+    "expected_uncertainty_after_guess": 1.6,
+    "compatible": true,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "-BBBB",
+    "turn": 4
+  },
+  {
+    "guess": "hatch",
+    "expected_uncertainty_after_guess": 1.1887218755408673,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "-BBBB",
+    "turn": 5
+  },
+  {
+    "guess": "match",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-BBBB",
+    "turn": 6
+  },
+  {
+    "guess": "patch",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "-BBBB",
+    "turn": 7
+  },
+  {
+    "guess": "watch",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 8
+  }
+]

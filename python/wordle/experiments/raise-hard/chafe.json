@@ -1,0 +1,31 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W--B",
+    "turn": 1
+  },
+  {
+    "guess": "blade",
+    "expected_uncertainty_after_guess": 1.8648809697945603,
+    "compatible": true,
+    "uncertainty_before_guess": 5.357552004618084,
+    "score": "--B-B",
+    "turn": 2
+  },
+  {
+    "guess": "heave",
+    "expected_uncertainty_after_guess": 1.0554218613124373,
+    "compatible": true,
+    "uncertainty_before_guess": 3.4594316186372978,
+    "score": "W-B-B",
+    "turn": 3
+  },
+  {
+    "guess": "chafe",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 4
+  }
+]

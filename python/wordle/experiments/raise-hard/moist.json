@@ -1,0 +1,39 @@
+[
+  {
+    "guess": "raise",
+    "score": "--BB-",
+    "turn": 1
+  },
+  {
+    "guess": "hoist",
+    "expected_uncertainty_after_guess": 0.750543055795941,
+    "compatible": true,
+    "uncertainty_before_guess": 3.1699250014423126,
+    "score": "-BBBB",
+    "turn": 2
+  },
+  {
+    "guess": "foist",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "-BBBB",
+    "turn": 3
+  },
+  {
+    "guess": "joist",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "-BBBB",
+    "turn": 4
+  },
+  {
+    "guess": "moist",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

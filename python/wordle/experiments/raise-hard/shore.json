@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W--WB",
+    "turn": 1
+  },
+  {
+    "guess": "scree",
+    "expected_uncertainty_after_guess": 1.160964047443681,
+    "compatible": true,
+    "uncertainty_before_guess": 3.3219280948873626,
+    "score": "B-W-B",
+    "turn": 2
+  },
+  {
+    "guess": "shore",
+    "expected_uncertainty_after_guess": 1.6,
+    "compatible": true,
+    "uncertainty_before_guess": 2.321928094887362,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

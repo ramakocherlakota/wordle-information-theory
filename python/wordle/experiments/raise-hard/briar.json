@@ -1,0 +1,15 @@
+[
+  {
+    "guess": "raise",
+    "score": "WWB--",
+    "turn": 1
+  },
+  {
+    "guess": "briar",
+    "expected_uncertainty_after_guess": 0.5,
+    "compatible": true,
+    "uncertainty_before_guess": 2,
+    "score": "BBBBB",
+    "turn": 2
+  }
+]

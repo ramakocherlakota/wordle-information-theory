@@ -1,0 +1,36 @@
+[
+  {
+    "guess": "salon",
+    "score": "-B---",
+    "turn": 1
+  },
+  {
+    "guess": "trice",
+    "score": "-W--W",
+    "turn": 2
+  },
+  {
+    "guess": "wager",
+    "expected_uncertainty_after_guess": 1.5903330361778862,
+    "compatible": true,
+    "uncertainty_before_guess": 3.8073549220576037,
+    "score": "-BWBB",
+    "turn": 3
+  },
+  {
+    "guess": "gamer",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": true,
+    "uncertainty_before_guess": 1.5849625007211563,
+    "score": "BB-BB",
+    "turn": 4
+  },
+  {
+    "guess": "gayer",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 1,
+    "score": "BBBBB",
+    "turn": 5
+  }
+]

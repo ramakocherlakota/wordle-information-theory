@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "W--WW",
+    "turn": 1
+  },
+  {
+    "guess": "sheep",
+    "expected_uncertainty_after_guess": 0.6666666666666666,
+    "compatible": false,
+    "uncertainty_before_guess": 4.169925001442312,
+    "score": "BBBB-",
+    "turn": 2
+  },
+  {
+    "guess": "sheer",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]

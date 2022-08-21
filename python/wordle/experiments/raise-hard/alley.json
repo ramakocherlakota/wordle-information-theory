@@ -1,0 +1,23 @@
+[
+  {
+    "guess": "raise",
+    "score": "-W--W",
+    "turn": 1
+  },
+  {
+    "guess": "cleat",
+    "expected_uncertainty_after_guess": 1.471722826400503,
+    "compatible": true,
+    "uncertainty_before_guess": 6.10852445677817,
+    "score": "-BWW-",
+    "turn": 2
+  },
+  {
+    "guess": "alley",
+    "expected_uncertainty_after_guess": 0,
+    "compatible": true,
+    "uncertainty_before_guess": 0,
+    "score": "BBBBB",
+    "turn": 3
+  }
+]
