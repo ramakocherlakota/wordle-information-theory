@@ -13,7 +13,7 @@ class Quordle:
                 still_unsolved.append(n)
                 remaining_answers = wordle.remaining_answers()
                 if len(remaining_answers) == 0:
-                    raise Exception("Inconsistent data")
+                    raise Exception(f"Inconsistent data in wordle {n}")
                 if len(remaining_answers) == 1:
                     found_guess = remaining_answers[0]
                 remaining_answers_list.append(remaining_answers)
@@ -57,7 +57,7 @@ class Quordle:
         self.wordles = []
         for scores in scores_list:
             guess_scores = self.create_guess_scores(guesses, scores)
-            self.wordles.append(Wordle.Wordle(guess_scores=guess_scores, hard_mode = hard_mode, debug = debug, mysql_username = mysql_username, mysql_password = mysql_password, mysql_host = mysql_host, mysql_database = mysql_database))
+            self.wordles.append(Wordle.Wordle(guess_scores=guess_scores, hard_mode = hard_mode, debug = debug, sqlite_dbname=sqlite_dbname, mysql_username = mysql_username, mysql_password = mysql_password, mysql_host = mysql_host, mysql_database = mysql_database))
 
     def create_guess_scores(self, guesses, scores):
         guess_scores = []
@@ -100,7 +100,7 @@ class Quordle:
             return g1
         g = {}
         g['guess'] = g1['guess']
-        g['hard_mode'] = g1['hard_mode'] or g2['hard_mode'] # hard_mode in quordle means at least of the guesses is hard_mode
+        g['compatible'] = g1['compatible'] or g2['compatible'] 
         g['uncertainty_before_guess'] = g1['uncertainty_before_guess'] + g2['uncertainty_before_guess']
         g['expected_uncertainty_after_guess'] = g1['expected_uncertainty_after_guess'] + g2['expected_uncertainty_after_guess']
         return g
