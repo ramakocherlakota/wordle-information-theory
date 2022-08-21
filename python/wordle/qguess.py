@@ -1,10 +1,10 @@
 import Quordle
 import sys, json
 
-# example 
+# usage is something like:
 # python qguess.py --guesses=trice,salon --scores="-----,bbb--;bb--b,-w---;--w--,-ww-b;w-b--,--w-w"
+# semicolons separate scores for different target words
 
-guesses = []
 scores_list = []
 hard_mode = False
 debug = False
