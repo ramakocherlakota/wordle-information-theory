@@ -38,7 +38,7 @@ class Quordle:
             for guess in guesses:
                 scores.append(self.common_wordle.score_guess(target, guess))
             guess_scores = self.create_guess_scores(guesses, scores)
-            wordle = Wordle.Wordle(guess_scores=guess_scores, hard_mode = hard_mode, debug = debug, sqlite_dbname=sqlite_dbname, mysql_username = mysql_username, mysql_password = mysql_password, mysql_host = mysql_host, mysql_database = mysql_database)
+            wordle = Wordle.Wordle(guess_scores=guess_scores, hard_mode = self.hard_mode, debug = self.debug, sqlite_dbname = self.sqlite_dbname, mysql_username = self.mysql_username, mysql_password = self.mysql_password, mysql_host = self.mysql_host, mysql_database = self.mysql_database)
             self.wordles.append(wordle)
 
             for guess in start_with:
@@ -60,11 +60,19 @@ class Quordle:
                  mysql_password=None,
                  mysql_host=None,
                  mysql_database=None) :
+        self.sqlite_dbname = sqlite_dbname
+        self.mysql_username = mysql_username
+        self.mysql_password = mysql_password
+        self.mysql_host = mysql_host
+        self.mysql_database = mysql_database
         self.common_wordle = Wordle.Wordle(sqlite_dbname = sqlite_dbname, mysql_username = mysql_username, mysql_password = mysql_password, mysql_host = mysql_host, mysql_database = mysql_database)
+        self.hard_mode = hard_mode
+        self.debug = debug
+
         self.wordles = []
         for scores in scores_list:
             guess_scores = self.create_guess_scores(guesses, scores)
-            self.wordles.append(Wordle.Wordle(guess_scores=guess_scores, hard_mode = hard_mode, debug = debug, sqlite_dbname=sqlite_dbname, mysql_username = mysql_username, mysql_password = mysql_password, mysql_host = mysql_host, mysql_database = mysql_database))
+            self.wordles.append(Wordle.Wordle(guess_scores=guess_scores, hard_mode = self.hard_mode, debug = self.debug, sqlite_dbname=sqlite_dbname, mysql_username = mysql_username, mysql_password = mysql_password, mysql_host = mysql_host, mysql_database = mysql_database))
 
     def create_guess_scores(self, guesses, scores):
         guess_scores = []

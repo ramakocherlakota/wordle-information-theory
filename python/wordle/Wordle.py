@@ -110,7 +110,7 @@ class Wordle :
         rows = self.query(f"select score from scores where guess = '{guess}' and answer = '{target}'", "score_guess")
         for row in rows:
             return row[0]
-        raise Exception(f"Inconsistent data in score_guess (guess={guess} answer={answer}")
+        raise Exception(f"Inconsistent data in score_guess (guess={guess} answer={answer})")
 
     def is_solved(self):
         for [guess, score] in self.guess_scores:
