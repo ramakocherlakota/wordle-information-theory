@@ -12,7 +12,7 @@ for arg in sys.argv[1:]:
             hard_mode = True
         if arg == "--debug":
             debug = True
-        if arg.startswith("--start="):
+        if arg.startswith("--start"):
             start_with = arg.split("=")[1].split(",")
     else:
         target = arg
