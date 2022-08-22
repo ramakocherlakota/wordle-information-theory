@@ -1,6 +1,7 @@
 import math
 from contextlib import closing
 import sqlite3, re, mysql.connector
+import boto3
 
 class Wordle :
 
@@ -70,12 +71,14 @@ class Wordle :
     #   starting words
 
     def __init__(self, guess_scores=[], hard_mode=False, debug=False,
+                 sqlite_bucket=None,
                  sqlite_dbname=None, 
                  mysql_username=None, 
                  mysql_password=None,
                  mysql_host=None,
                  mysql_database=None) :
         self.sqlite_dbname = sqlite_dbname
+        self.sqlite_bucket = sqlite_bucket
         self.mysql_username = mysql_username
         self.mysql_password = mysql_password
         self.mysql_host = mysql_host
@@ -86,8 +89,15 @@ class Wordle :
 
     def connect(self):
         if self.sqlite_dbname:
+            connect_to = self.sqlite_dbname
+            if self.sqlite_bucket:
+                connect_to = f"/tmp/{self.sqlite_dbname}"
+                client = boto3.client('s3')
+                client.download_file(self.sqlite_bucket, 
+                                     self.sqlite_dbname,
+                                     connect_to)
             self.log2 = "log2("
-            connection = sqlite3.connect(self.sqlite_dbname)
+            connection = sqlite3.connect(connect_to)
             connection.create_function('log2', 1, lambda x: math.log(x, 2))
             return connection
         else:

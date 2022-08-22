@@ -56,11 +56,13 @@ class Quordle:
 
     def __init__(self, guesses=[], scores_list=[[]], hard_mode=False, debug=False,
                  sqlite_dbname=None, 
+                 sqlite_bucket=None, 
                  mysql_username=None, 
                  mysql_password=None,
                  mysql_host=None,
                  mysql_database=None) :
         self.sqlite_dbname = sqlite_dbname
+        self.sqlite_bucket = sqlite_bucket
         self.mysql_username = mysql_username
         self.mysql_password = mysql_password
         self.mysql_host = mysql_host
@@ -72,7 +74,7 @@ class Quordle:
         self.wordles = []
         for scores in scores_list:
             guess_scores = self.create_guess_scores(guesses, scores)
-            self.wordles.append(Wordle.Wordle(guess_scores=guess_scores, hard_mode = self.hard_mode, debug = self.debug, sqlite_dbname=sqlite_dbname, mysql_username = mysql_username, mysql_password = mysql_password, mysql_host = mysql_host, mysql_database = mysql_database))
+            self.wordles.append(Wordle.Wordle(guess_scores=guess_scores, hard_mode = self.hard_mode, debug = self.debug, sqlite_dbname=sqlite_dbname, sqlite_bucket=sqlite_bucket, mysql_username = mysql_username, mysql_password = mysql_password, mysql_host = mysql_host, mysql_database = mysql_database))
 
     def create_guess_scores(self, guesses, scores):
         guess_scores = []
