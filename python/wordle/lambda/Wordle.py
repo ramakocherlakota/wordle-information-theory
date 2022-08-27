@@ -1,6 +1,7 @@
 import math
 from contextlib import closing
-import sqlite3, re, mysql.connector
+import sqlite3, re, mysql.connector, os, sys
+from datetime import datetime
 import boto3
 
 class Wordle :
@@ -55,21 +56,6 @@ class Wordle :
         return guesses            
 
 
-    # all incoming payloads should include:
-    # - name of sqlite db or connect info for mysql
-    # - hard mode?
-    # - list of guesses and scores
-    
-    # endpoints
-    # - guess: send in above payload and get back
-    #   word (next guess)
-    #   expected entropy
-    #   - details element, includes entropy before and after score for each response.  if more than one target word then split entropies out?
-
-    # - solve: above payload, plus 
-    #   target words
-    #   starting words
-
     def __init__(self, guess_scores=[], hard_mode=False, debug=False,
                  sqlite_bucket=None,
                  sqlite_dbname=None, 
@@ -92,16 +78,17 @@ class Wordle :
             connect_to = self.sqlite_dbname
             if self.sqlite_bucket:
                 connect_to = f"/tmp/{self.sqlite_dbname}"
-                client = boto3.client('s3')
-                client.download_file(self.sqlite_bucket, 
-                                     self.sqlite_dbname,
-                                     connect_to)
-            self.log2 = "log2("
+                if not os.path.exists(connect_to):
+                    client = boto3.client('s3')
+                    print(f"{datetime.now()}: downloading {self.sqlite_dbname} from S3", file=sys.stderr)
+                    client.download_file(self.sqlite_bucket, 
+                                         self.sqlite_dbname,
+                                         connect_to)
+                    print(f"{datetime.now()}: download complete", file=sys.stderr)
             connection = sqlite3.connect(connect_to)
             connection.create_function('log2', 1, lambda x: math.log(x, 2))
             return connection
         else:
-            self.log2 = "log(2, "
             return mysql.connector.connect(user=self.mysql_username, 
                                            password=self.mysql_password,
                                            host=self.mysql_host,
@@ -154,7 +141,7 @@ class Wordle :
         if for_guess:
             guess_clause = f" and guess='{for_guess}'"
         subsql = f"select guess, score, count(*) as c from scores where answer in ({answers_clause}) {guess_clause} group by 1, 2"
-        sql = f"select guess, sum(c * {self.log2}c)) / sum(c) from ({subsql}) as t1 group by 1 order by 2"
+        sql = f"select guess, sum(c * log2n) / sum(c) from ({subsql}) as t1, log2_lookup where log2_lookup.n = c group by 1 order by 2"
         uncertainty_by_guess = []
         for [guess, uncertainty] in self.query(sql, "expected_uncertainty_by_guess"):
             uncertainty_by_guess.append({

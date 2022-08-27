@@ -1,7 +1,5 @@
 from contextlib import closing
-import sqlite3
-import sys
-import gzip
+import sqlite3, sys, gzip, math
 
 dbname = sys.argv[1]
 file = sys.argv[2]
@@ -36,5 +34,9 @@ with closing(sqlite3.connect(dbname)) as connection:
 
     cursor.execute("create table guesses(guess text not null primary key)");
     cursor.execute("insert into guesses select distinct guess from scores")
+
+    cursor.execute("create table log2_lookup(n int not null primary key, log2n float not null)")
+    for n in range(1, 10000):
+        cursor.execute(f"insert into log2_lookup(n, log2n) values({n}, {math.log(n, 2)})")
 
     connection.commit()
