@@ -1,5 +1,6 @@
 import Wordle
 from functools import reduce
+import sys
 
 class Quordle:
 
@@ -30,24 +31,24 @@ class Quordle:
         return expected_uncertainties[0]
             
     def solve(self, targets, start_with=[]):
-        guesses = start_with
+        guesses = []
         self.wordles = []
         for n in range(len(targets)):
             target = targets[n]
             scores = []
-            for guess in guesses:
-                scores.append(self.common_wordle.score_guess(target, guess))
-            guess_scores = self.create_guess_scores(guesses, scores)
+            for guess in start_with:
+                score = self.common_wordle.score_guess(target, guess)
+                scores.append(score)
+            guess_scores = self.create_guess_scores(start_with, scores)
             wordle = Wordle.Wordle(guess_scores=guess_scores, hard_mode = self.hard_mode, debug = self.debug, sqlite_dbname = self.sqlite_dbname, mysql_username = self.mysql_username, mysql_password = self.mysql_password, mysql_host = self.mysql_host, mysql_database = self.mysql_database)
             self.wordles.append(wordle)
 
-            for guess in start_with:
-                score = wordle.score_guess(target, guess)
-                wordle.guess_scores.append([guess, score])
         while not self.is_solved():
             next_guess = self.guess()
             guess = next_guess['guess']
-            for wordle in self.wordles:
+            for k in range(len(self.wordles)):
+                wordle = self.wordles[k]
+                target = targets[k]
                 if not wordle.is_solved():
                     score = wordle.score_guess(target, guess)
                     wordle.guess_scores.append([guess, score])
