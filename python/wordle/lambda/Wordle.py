@@ -1,6 +1,6 @@
 import math
 from contextlib import closing
-import sqlite3, re, mysql.connector, os, sys
+import sqlite3, re, os, sys
 from datetime import datetime
 import boto3
 
@@ -58,42 +58,27 @@ class Wordle :
 
     def __init__(self, guess_scores=[], hard_mode=False, debug=False,
                  sqlite_bucket=None,
-                 sqlite_dbname=None, 
-                 mysql_username=None, 
-                 mysql_password=None,
-                 mysql_host=None,
-                 mysql_database=None) :
+                 sqlite_dbname=None) :
         self.sqlite_dbname = sqlite_dbname
         self.sqlite_bucket = sqlite_bucket
-        self.mysql_username = mysql_username
-        self.mysql_password = mysql_password
-        self.mysql_host = mysql_host
-        self.mysql_database = mysql_database
         self.guess_scores = guess_scores
         self.hard_mode = hard_mode
         self.debug = debug
 
     def connect(self):
-        if self.sqlite_dbname:
-            connect_to = self.sqlite_dbname
-            if self.sqlite_bucket:
-                connect_to = f"/tmp/{self.sqlite_dbname}"
-                if not os.path.exists(connect_to):
-                    client = boto3.client('s3')
-                    print(f"{datetime.now()}: downloading {self.sqlite_dbname} from S3", file=sys.stderr)
-                    client.download_file(self.sqlite_bucket, 
-                                         self.sqlite_dbname,
-                                         connect_to)
-                    print(f"{datetime.now()}: download complete", file=sys.stderr)
-            connection = sqlite3.connect(connect_to)
-            connection.create_function('log2', 1, lambda x: math.log(x, 2))
-            return connection
-        else:
-            return mysql.connector.connect(user=self.mysql_username, 
-                                           password=self.mysql_password,
-                                           host=self.mysql_host,
-                                           database=self.mysql_database)
-
+        connect_to = self.sqlite_dbname
+        if self.sqlite_bucket:
+            connect_to = f"/tmp/{self.sqlite_dbname}"
+            if not os.path.exists(connect_to):
+                client = boto3.client('s3')
+                print(f"{datetime.now()}: downloading {self.sqlite_dbname} from S3", file=sys.stderr)
+                client.download_file(self.sqlite_bucket, 
+                                     self.sqlite_dbname,
+                                     connect_to)
+                print(f"{datetime.now()}: download complete", file=sys.stderr)
+        connection = sqlite3.connect(connect_to)
+        connection.create_function('log2', 1, lambda x: math.log(x, 2))
+        return connection
 
     def query(self, sql, title=None):
         with closing(self.connect()) as connection:

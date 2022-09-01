@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: wordle/quordle
+Globals:
+  Function:
+    Timeout: 900
+  Api:
+    Cors:
+      AllowMethods: '''*'''
+      AllowHeaders: '''*'''
+      AllowOrigin: '''*.ramakocherlakota.net'''
+Resources:
+  WordleFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://wordle-lambda-code/d204fd8aa8b44772ace8dcb46dacb941
+      Handler: lambda.handler
+      MemorySize: 10000
+      Runtime: python3.9
+      FunctionUrlConfig:
+        AuthType: NONE
+      Policies:
+      - AWSLambdaExecute
+      - Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Action:
+          - s3:GetObject
+          - s3:ListBucket
+          - s3:GetBucketLocation
+          Resource: arn:aws:s3:::wordle-sqlite
+    Metadata:
+      SamResourceId: WordleFunction
