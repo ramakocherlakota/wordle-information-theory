@@ -24,13 +24,24 @@ Resources:
       FunctionUrlConfig:
         AuthType: NONE
 
+      VpcConfig:
+        SecurityGroupIds:
+          - "sg-08f16b195b617b692"
+        SubnetIds:
+          - "subnet-05390b4b204fd772e"
+
+      FileSystemConfigs:
+        - Arn: arn:aws:elasticfilesystem:us-east-1:111144063151:access-point/fsap-069fbd36c4a047102
+          LocalMountPath: /mnt/efs
+
       Policies:
         - AWSLambdaExecute
         - Version: '2012-10-17' # Policy Document
           Statement:
             - Effect: Allow
               Action:
-                - s3:GetObject
-                - s3:ListBucket
-                - s3:GetBucketLocation
-              Resource: 'arn:aws:s3:::wordle-sqlite'
+                - elasticfilesystem:ClientMount
+                - elasticfilesystem:ClientRootAccess
+                - elasticfilesystem:ClientWrite
+                - elasticfilesystem:DescribeMountTargets
+              Resource: "*"

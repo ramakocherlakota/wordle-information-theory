@@ -13,21 +13,30 @@ Resources:
   WordleFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://wordle-lambda-code/d204fd8aa8b44772ace8dcb46dacb941
+      CodeUri: s3://wordle-lambda-code/e9ed6ee595b195bea8cf3fe3d0b74d50
       Handler: lambda.handler
       MemorySize: 10000
       Runtime: python3.9
       FunctionUrlConfig:
         AuthType: NONE
+      VpcConfig:
+        SecurityGroupIds:
+        - sg-08f16b195b617b692
+        SubnetIds:
+        - subnet-05390b4b204fd772e
+      FileSystemConfigs:
+      - Arn: arn:aws:elasticfilesystem:us-east-1:111144063151:access-point/fsap-069fbd36c4a047102
+        LocalMountPath: /mnt/efs
       Policies:
       - AWSLambdaExecute
       - Version: '2012-10-17'
         Statement:
         - Effect: Allow
           Action:
-          - s3:GetObject
-          - s3:ListBucket
-          - s3:GetBucketLocation
-          Resource: arn:aws:s3:::wordle-sqlite
+          - elasticfilesystem:ClientMount
+          - elasticfilesystem:ClientRootAccess
+          - elasticfilesystem:ClientWrite
+          - elasticfilesystem:DescribeMountTargets
+          Resource: '*'
     Metadata:
       SamResourceId: WordleFunction

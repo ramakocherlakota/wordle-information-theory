@@ -14,8 +14,7 @@ def handler(event, context) :
             print("after loads, data=")
             print(data)
             
-        wordle = Wordle(sqlite_dbname = "wordle.sqlite",
-                        sqlite_bucket = "wordle-sqlite",
+        wordle = Wordle(sqlite_dbname = "/mnt/efs/wordle.sqlite",
                         guess_scores = data['guess_scores'])
         guess =  wordle.guess()
 
