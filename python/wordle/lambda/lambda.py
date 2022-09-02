@@ -1,22 +1,44 @@
-import json
+import json, sys
 from Wordle import Wordle
 
 def handler(event, context) :
-    print("event=")
-    print(event)
     if 'body' in event:
         data = event['body']
-        print("data=")
-        print(data)
         # deserialize if necessary
         if type(data) is str:
             data = json.loads(data)
-            print("after loads, data=")
-            print(data)
             
-        wordle = Wordle(sqlite_dbname = "/mnt/efs/wordle.sqlite",
-                        guess_scores = data['guess_scores'])
-        guess =  wordle.guess()
+        
+
+        output = "operation not supported"
+        hard_mode = False
+        if 'hard_mode' in data:
+            hard_mode = True
+
+        sqlite_dbname = "/mnt/efs/wordle.sqlite"
+        if 'sqlite_dbname' in data:
+            sqlite_dbname = data['sqlite_dbname']
+
+        if data['operation'] == "remaining_answers":
+            wordle = Wordle(sqlite_dbname = sqlite_dbname,
+                            hard_mode = hard_mode,
+                            guess_scores = data['guess_scores'])
+            output = wordle.remaining_answers()
+
+        if data['operation'] == "guess":
+            wordle = Wordle(sqlite_dbname = sqlite_dbname,
+                            hard_mode = hard_mode,
+                            guess_scores = data['guess_scores'])
+            output = wordle.guess()
+
+        if data['operation'] == "solve":
+            start_with = []
+            if 'start_with' in data:
+                start_with = data['start_with']
+            wordle = Wordle(sqlite_dbname = sqlite_dbname,
+                            guess_scores = [],
+                            hard_mode = hard_mode)
+            output = wordle.solve(data['target'], start_with=start_with)
 
         headers = {
             "Access-Control-Allow-Headers": 
@@ -28,12 +50,12 @@ def handler(event, context) :
             "headers": headers,
             "statusCode": 200,
             "body": json.dumps(
-                guess
+                output
             )
         }
 
 
 if __name__ == "__main__":
-    with open("/Users/rama/tmp/guess.json") as file:
-        event = json.load(file)
-        print(handler(event, None))
+    with open(sys.argv[1]) as file:
+        data = json.load(file)
+        print(handler({"body": data}, None))

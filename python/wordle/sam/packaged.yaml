@@ -13,7 +13,7 @@ Resources:
   WordleFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://wordle-lambda-code/e9ed6ee595b195bea8cf3fe3d0b74d50
+      CodeUri: s3://wordle-lambda-code/d2bb14b3a958c39f54a75ae00bff7696
       Handler: lambda.handler
       MemorySize: 10000
       Runtime: python3.9

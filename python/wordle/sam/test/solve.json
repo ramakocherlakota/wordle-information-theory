@@ -1,0 +1,5 @@
+{
+    "operation" : "solve",
+    "target" : "fungi",
+    "start_with" : ["salon", "trice"]
+}
