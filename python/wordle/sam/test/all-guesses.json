@@ -1,0 +1,7 @@
+{
+    "guess_scores": [
+        ["trice", "-bb-b"],
+        ["swamp", "----w"]
+    ],
+    "operation" : "rate_all_guesses"
+}

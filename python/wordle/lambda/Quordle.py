@@ -1,6 +1,6 @@
 import Wordle
 from functools import reduce
-import sys
+import sys, json
 
 class Quordle:
 
@@ -27,6 +27,8 @@ class Quordle:
             remaining_answers = remaining_answers_list[n]
             wordle_expected_uncertainties.append(self.list_to_dict_keyed_on(wordle.expected_uncertainty_by_guess(remaining_answers, found_guess), 'guess'))
         expected_uncertainties = list(self.merge_by_guess(wordle_expected_uncertainties).values())
+        if self.hard_mode:
+            expected_uncertainties = list(filter(lambda x : x['compatible'], expected_uncertainties))
         expected_uncertainties.sort(key=lambda x: x['expected_uncertainty_after_guess'])
         return expected_uncertainties[0]
             
@@ -40,7 +42,7 @@ class Quordle:
                 score = self.common_wordle.score_guess(target, guess)
                 scores.append(score)
             guess_scores = self.create_guess_scores(start_with, scores)
-            wordle = Wordle.Wordle(guess_scores=guess_scores, hard_mode = self.hard_mode, debug = self.debug, sqlite_dbname = self.sqlite_dbname, mysql_username = self.mysql_username, mysql_password = self.mysql_password, mysql_host = self.mysql_host, mysql_database = self.mysql_database)
+            wordle = Wordle.Wordle(guess_scores=guess_scores, hard_mode = false, debug = self.debug, sqlite_bucket=self.sqlite_bucket, sqlite_dbname = self.sqlite_dbname)
             self.wordles.append(wordle)
 
         while not self.is_solved():
@@ -57,25 +59,17 @@ class Quordle:
 
     def __init__(self, guesses=[], scores_list=[[]], hard_mode=False, debug=False,
                  sqlite_dbname=None, 
-                 sqlite_bucket=None, 
-                 mysql_username=None, 
-                 mysql_password=None,
-                 mysql_host=None,
-                 mysql_database=None) :
+                 sqlite_bucket=None) :
         self.sqlite_dbname = sqlite_dbname
         self.sqlite_bucket = sqlite_bucket
-        self.mysql_username = mysql_username
-        self.mysql_password = mysql_password
-        self.mysql_host = mysql_host
-        self.mysql_database = mysql_database
-        self.common_wordle = Wordle.Wordle(sqlite_dbname = sqlite_dbname, mysql_username = mysql_username, mysql_password = mysql_password, mysql_host = mysql_host, mysql_database = mysql_database)
+        self.common_wordle = Wordle.Wordle(sqlite_dbname = sqlite_dbname, sqlite_bucket = sqlite_bucket)
         self.hard_mode = hard_mode
         self.debug = debug
 
         self.wordles = []
         for scores in scores_list:
             guess_scores = self.create_guess_scores(guesses, scores)
-            self.wordles.append(Wordle.Wordle(guess_scores=guess_scores, hard_mode = self.hard_mode, debug = self.debug, sqlite_dbname=sqlite_dbname, sqlite_bucket=sqlite_bucket, mysql_username = mysql_username, mysql_password = mysql_password, mysql_host = mysql_host, mysql_database = mysql_database))
+            self.wordles.append(Wordle.Wordle(guess_scores=guess_scores, hard_mode = False, debug = self.debug, sqlite_dbname=sqlite_dbname, sqlite_bucket=sqlite_bucket))
 
     def create_guess_scores(self, guesses, scores):
         guess_scores = []

@@ -8,6 +8,39 @@ class Wordle :
 
     # wordle api functions
 
+    def rate_guess(self, guess) :
+        if self.is_solved():
+            return None
+        remaining_answers = self.remaining_answers()
+        if len(remaining_answers) == 0:
+            raise Exception("Inconsistent data")
+        return self.expected_uncertainty_for_guess(remaining_answers, guess)[0]
+
+    def rate_all_guesses(self) :
+        if self.is_solved():
+            return None
+        remaining_answers = self.remaining_answers()
+        if len(remaining_answers) == 0:
+            raise Exception("Inconsistent data")
+        exp_by_guess = self.expected_uncertainty_by_guess(remaining_answers)
+        prior_unc = exp_by_guess[0]['uncertainty_before_guess']
+        info_map = {}
+        min_exp_unc = prior_unc
+        compatible = []
+        for g in exp_by_guess :
+            info_map[g['guess']] = prior_unc - g["expected_uncertainty_after_guess"]
+            if g['compatible'] :
+                compatible.append(g['guess'])
+            if g["expected_uncertainty_after_guess"] < min_exp_unc:
+                min_exp_unc = g["expected_uncertainty_after_guess"]
+        max_exp_info = prior_unc - min_exp_unc
+        for h in info_map:
+            info_map[h] = info_map[h] / max_exp_info
+        return {
+            "info_map" : info_map,
+            "compatible" : compatible
+        }
+
     def guess(self) :
         if self.is_solved():
             return None
@@ -24,8 +57,6 @@ class Wordle :
             }
         else:
             next_guesses = self.expected_uncertainty_by_guess(remaining_answers)
-            if self.hard_mode:
-                next_guesses = list(filter(lambda x : x['compatible'], next_guesses))
             best_uncertainty = next_guesses[0]['expected_uncertainty_after_guess']
             # prefer a guess in remaining_answers if there is one with the same uncertainty
             for g in next_guesses:
@@ -126,7 +157,10 @@ class Wordle :
         if for_guess:
             guess_clause = f" and guess='{for_guess}'"
         subsql = f"select guess, score, count(*) as c from scores where answer in ({answers_clause}) {guess_clause} group by 1, 2"
-        sql = f"select guess, sum(c * log2n) / sum(c) from ({subsql}) as t1, log2_lookup where log2_lookup.n = c group by 1 order by 2"
+        hard_mode_clause = ""
+        if self.hard_mode:
+            hard_mode_clause = f"and guess in ({answers_clause}) "
+        sql = f"select guess, sum(c * log2n) / sum(c) from ({subsql}) as t1, log2_lookup where log2_lookup.n = c {hard_mode_clause} group by 1 order by 2"
         uncertainty_by_guess = []
         for [guess, uncertainty] in self.query(sql, "expected_uncertainty_by_guess"):
             uncertainty_by_guess.append({
@@ -136,4 +170,8 @@ class Wordle :
                 "uncertainty_before_guess" : math.log(answer_count, 2)
             })
         return uncertainty_by_guess
+
+    def expected_uncertainty_for_guess(self, remaining_answers, guess) :
+        return self.expected_uncertainty_by_guess(remaining_answers, for_guess = guess)
+
 
