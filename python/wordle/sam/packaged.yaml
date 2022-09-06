@@ -1,32 +1,61 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: wordle/quordle
+Description: wordle/quordle helper app
+Parameters:
+  LambdaTimeoutSeconds:
+    Type: String
+    Default: 300
+  LambdaMemorySizeMb:
+    Type: String
+  LambdaUrlAuthType:
+    Type: String
+    Default: NONE
+  LambdaFunctionName:
+    Type: String
+    Default: wordle
+  LambdaUrlCorsOrigin:
+    Type: String
+  SubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+  SecurityGroupIds:
+    Type: List<AWS::EC2::SecurityGroup::Id>
+  EfsAccessPointArn:
+    Type: String
+  EfsMountPoint:
+    Type: String
 Globals:
   Function:
-    Timeout: 900
-  Api:
-    Cors:
-      AllowMethods: '''*'''
-      AllowHeaders: '''*'''
-      AllowOrigin: '''*.ramakocherlakota.net'''
+    Timeout:
+      Ref: LambdaTimeoutSeconds
 Resources:
   WordleFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://wordle-lambda-code/d2bb14b3a958c39f54a75ae00bff7696
+      CodeUri: s3://wordle-lambda-code/e36ba6435a69499a3cd181cc13f36817
+      FunctionName:
+        Ref: LambdaFunctionName
       Handler: lambda.handler
-      MemorySize: 10000
+      MemorySize:
+        Ref: LambdaMemorySizeMb
       Runtime: python3.9
       FunctionUrlConfig:
-        AuthType: NONE
+        AuthType:
+          Ref: LambdaUrlAuthType
+        Cors:
+          AllowMethods:
+          - POST
+          AllowOrigins:
+          - Ref: LambdaUrlCorsOrigin
       VpcConfig:
         SecurityGroupIds:
-        - sg-08f16b195b617b692
+          Ref: SecurityGroupIds
         SubnetIds:
-        - subnet-05390b4b204fd772e
+          Ref: SubnetIds
       FileSystemConfigs:
-      - Arn: arn:aws:elasticfilesystem:us-east-1:111144063151:access-point/fsap-069fbd36c4a047102
-        LocalMountPath: /mnt/efs
+      - Arn:
+          Ref: EfsAccessPointArn
+        LocalMountPath:
+          Ref: EfsMountPoint
       Policies:
       - AWSLambdaExecute
       - Version: '2012-10-17'
