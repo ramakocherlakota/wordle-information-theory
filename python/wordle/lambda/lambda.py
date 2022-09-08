@@ -28,7 +28,6 @@ def handler(event, context) :
 
         if 'quordle' not in data:
             wordle = Wordle(sqlite_dbname = os.environ.get('SQLITE_DBNAME'),
-                            sqlite_bucket = os.environ.get('SQLITE_BUCKET', None),
                             hard_mode = data.get('hard_mode', False),
                             guess_scores = data.get('guess_scores', []))
 

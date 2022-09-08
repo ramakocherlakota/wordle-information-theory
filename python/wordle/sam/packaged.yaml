@@ -31,7 +31,7 @@ Resources:
   WordleFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://wordle-lambda-code/e36ba6435a69499a3cd181cc13f36817
+      CodeUri: s3://wordle-quordle-code/e36ba6435a69499a3cd181cc13f36817
       FunctionName:
         Ref: LambdaFunctionName
       Handler: lambda.handler
@@ -39,8 +39,7 @@ Resources:
         Ref: LambdaMemorySizeMb
       Runtime: python3.9
       FunctionUrlConfig:
-        AuthType:
-          Ref: LambdaUrlAuthType
+        AuthType: NONE
         Cors:
           AllowMethods:
           - POST
@@ -63,8 +62,6 @@ Resources:
         - Effect: Allow
           Action:
           - elasticfilesystem:ClientMount
-          - elasticfilesystem:ClientRootAccess
-          - elasticfilesystem:ClientWrite
           - elasticfilesystem:DescribeMountTargets
           Resource: '*'
     Metadata:

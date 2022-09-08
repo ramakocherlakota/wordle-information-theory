@@ -19,12 +19,13 @@ with closing(sqlite3.connect(dbname)) as connection:
     n = 0
     while True:
         line = fh.readline()
-        print(line.rstrip())
+#        print(line.rstrip())
         if line :
             [answer, guess, score] = line.rstrip().split("|")
             cursor.execute(f"insert into scores(answer, guess, score) values('{answer}', '{guess}', '{score}')")
             n = n + 1
             if n % 1000 == 0:
+                print(n)
                 connection.commit()
         else :
             break
