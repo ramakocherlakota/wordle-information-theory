@@ -22,7 +22,7 @@ Feels like we're really getting warm.  `BLO--` ... can't be many words like that
 
 ![Image of fourth guess "BLOWN"](../img/001-guess-4.png "Guess 4; everything is right!")
 
-Hooray!  We got it in four!  If you've been Wordling for a while, you probably have found that four is about par - some of the harder words take more guesses and some of the easier ones you can get in three (getting it in one or two is basically a matter of luck) but four is, for most of us, the most common score we achieve on our daily Wordle.
+Hooray!  We got it in four!  If you've been Wordling for a while, you probably have found that four is about par - some of the harder words take more guesses and some of the easier ones you can get in three (getting it in one or two is basically a matter of luck) but four is, for most of us, a middling-to-good score on our daily Wordle.
 
 In this presentation I'm going to talk about what math can tell us about Wordle and how it can help us to understand these observations - that four is about par for Wordle, that some words are easier or harder to guess.  Along the way we'll try to answer a few questions that might actually help you become a better Wordler.  In particular, we'll try to attack the question that Wordlers have argued about for eons (or at least it feels that way if you look at Twitter): What is the best opening guess for a Wordle game?
 

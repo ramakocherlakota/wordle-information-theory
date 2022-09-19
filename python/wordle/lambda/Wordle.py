@@ -89,17 +89,18 @@ class Wordle :
 
     def __init__(self, guess_scores=[], hard_mode=False, debug=False,
                  sqlite_bucket=None,
+                 sqlite_folder=None,
                  sqlite_dbname=None) :
         self.sqlite_dbname = sqlite_dbname
+        self.sqlite_folder = sqlite_folder
         self.sqlite_bucket = sqlite_bucket
         self.guess_scores = guess_scores
         self.hard_mode = hard_mode
         self.debug = debug
 
     def connect(self):
-        connect_to = self.sqlite_dbname
+        connect_to = f"{self.sqlite_folder}/{self.sqlite_dbname}"
         if self.sqlite_bucket:
-            connect_to = f"/tmp/{self.sqlite_dbname}"
             if not os.path.exists(connect_to):
                 client = boto3.client('s3')
                 print(f"{datetime.now()}: downloading {self.sqlite_dbname} from S3", file=sys.stderr)
@@ -108,7 +109,6 @@ class Wordle :
                                      connect_to)
                 print(f"{datetime.now()}: download complete", file=sys.stderr)
         connection = sqlite3.connect(connect_to)
-        connection.create_function('log2', 1, lambda x: math.log(x, 2))
         return connection
 
     def query(self, sql, title=None):

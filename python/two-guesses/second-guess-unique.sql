@@ -1,0 +1,1 @@
+select answers.answer, count(distinct scores.answer) from scores, answers where guess=answers.answer and score in (select score from scores where guess=answers.answer group by 1 having count(*) = 1) group by 1 order by 2 desc limit 10;

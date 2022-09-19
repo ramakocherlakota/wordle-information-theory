@@ -14,6 +14,6 @@ for arg in sys.argv:
     if "=" in arg:
         guess_scores.append(arg.split("="))
 
-wordle = Wordle.Wordle(sqlite_dbname = "../db/wordle.sqlite", guess_scores = guess_scores, hard_mode=hard_mode, debug=debug)
+wordle = Wordle.Wordle(sqlite_folder="../db", sqlite_dbname = "wordle.sqlite", guess_scores = guess_scores, hard_mode=hard_mode, debug=debug)
 
 print(json.dumps(wordle.guess()))

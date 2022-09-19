@@ -2,7 +2,7 @@
 
 ## Wordle Basics
 
-Let's apply all this machinery to a more interesting game: Wordle.  If you look at the javscript source code (I didn't but somebody else did an posted the results on the internet) you'll see that there are 2315 words that could be the solution to your daily Wordle.  These are basically the reasonably common five-letter English words, but without plurals and, for the most part, past tenses.  If you want to see the list in alphaabetical order, (click here)[../py/answers.txt[.
+Let's apply all this machinery to a more interesting game: Wordle.  If you look at the javscript source code (I didn't but somebody else did an posted the results on the internet) you'll see that there are 2315 words that could be the solution to your daily Wordle.  These are basically the reasonably common five-letter English words, but without plurals and, for the most part, past tenses.  If you want to see the list in alphaabetical order, (click here)[../data/answers.txt[.
 
 So let's make some assumptions about the way the game works.  We'll assume that on any given day, the answer word is chosen at random from among those 2315.  That's not actually trye - the daily answer is determined in advance and is itself in the javascript code but let's pretend we don't have access to that information (as most Wordle players don't) and that we don't remember what yesterday's word was (it was LOSER, which felt a little personal but I solved it in three, so take that, Mr. Wordle!).  Based on how we defined uncertainty, the uncertainty involved in trying to guess the word with no clues is log(2315) = 11.176 bits.
 

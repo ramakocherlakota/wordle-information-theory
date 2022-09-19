@@ -21,6 +21,6 @@ if not target:
     print("You must specify a target word!")
     sys.exit(1)
 
-wordle = Wordle.Wordle(sqlite_dbname = "../db/wordle.sqlite", hard_mode=hard_mode, debug=debug)
+wordle = Wordle.Wordle(sqlite_folder="../db", sqlite_dbname = "wordle.sqlite", hard_mode=hard_mode, debug=debug)
 
 print(json.dumps(wordle.solve(target, start_with=start_with)))

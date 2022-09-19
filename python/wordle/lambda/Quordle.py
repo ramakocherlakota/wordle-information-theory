@@ -58,9 +58,11 @@ class Quordle:
         return guesses
 
     def __init__(self, guesses=[], scores_list=[[]], hard_mode=False, debug=False,
+                 sqlite_folder=None,
                  sqlite_dbname=None, 
                  sqlite_bucket=None) :
         self.sqlite_dbname = sqlite_dbname
+        self.sqlite_folder = sqlite_folder
         self.sqlite_bucket = sqlite_bucket
         self.common_wordle = Wordle.Wordle(sqlite_dbname = sqlite_dbname, sqlite_bucket = sqlite_bucket)
         self.hard_mode = hard_mode

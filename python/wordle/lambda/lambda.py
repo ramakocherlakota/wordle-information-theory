@@ -27,7 +27,8 @@ def handler(event, context) :
             data = json.loads(data)
 
         if 'quordle' not in data:
-            wordle = Wordle(sqlite_dbname = os.environ.get('SQLITE_DBNAME'),
+            wordle = Wordle(sqlite_dbname = data.get('sqlite_dbname', os.environ.get('SQLITE_DBNAME')),
+                            sqlite_folder = data.get('sqlite_folder', os.environ.get('SQLITE_FOLDER')),
                             hard_mode = data.get('hard_mode', False),
                             guess_scores = data.get('guess_scores', []))
 

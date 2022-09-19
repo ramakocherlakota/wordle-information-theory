@@ -47,6 +47,12 @@ Resources:
       Handler: lambda.handler
       MemorySize: !Ref LambdaMemorySizeMb
       Runtime: python3.9
+      Environment: 
+        Variables:
+          CORS_ORIGIN: !Ref LambdaUrlCorsOrigin
+          SQLITE_DBNAME: "wordle.sqlite"
+          SQLITE_FOLDER: !Ref EfsMountPoint
+
       FunctionUrlConfig:
         AuthType: NONE
         Cors:

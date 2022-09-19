@@ -17,6 +17,6 @@ for arg in sys.argv[1:]:
     else:
         for_guess = arg
 
-wordle = Wordle.Wordle(sqlite_dbname = "../db/wordle.sqlite", guess_scores = guess_scores, hard_mode=hard_mode, debug=debug)
+wordle = Wordle.Wordle(sqlite_folder="../db", sqlite_dbname = "wordle.sqlite", guess_scores = guess_scores, hard_mode=hard_mode, debug=debug)
 
 print(json.dumps(wordle.rate_guess(for_guess)))

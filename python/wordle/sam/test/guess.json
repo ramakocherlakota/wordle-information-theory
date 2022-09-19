@@ -1,7 +1,6 @@
 {
     "operation" : "guess",
     "guess_scores": [
-        ["trice", "-bb-b"],
-        ["swamp", "----w"]
-    ]
+        ["stare", "--bb-"]
+     ]
 }
