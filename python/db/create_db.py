@@ -37,7 +37,7 @@ with closing(sqlite3.connect(dbname)) as connection:
     cursor.execute("insert into guesses select distinct guess from scores")
 
     cursor.execute("create table log2_lookup(n int not null primary key, log2n float not null)")
-    for n in range(1, 10000):
+    for n in range(1, 12000):
         cursor.execute(f"insert into log2_lookup(n, log2n) values({n}, {math.log(n, 2)})")
 
     connection.commit()
